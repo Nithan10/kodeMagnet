@@ -36,7 +36,7 @@ function Navbar({ className }: { className?: string }) {
   
   const pathname = usePathname();
 
-  // Helper to highlight active links
+  // Helper to highlight active links (Used for Home)
   const getLinkClass = (path: string) => {
     const isActive = pathname === path;
     return cn(
@@ -180,17 +180,33 @@ function Navbar({ className }: { className?: string }) {
                 </MenuItem>
             </div>
 
-            {/* 4. About Us */}
-            <Link href="/about" className={getLinkClass("/about")}>
+            {/* 4. About Us - CUSTOM COLOR */}
+            <Link 
+              href="/about" 
+              className={cn(
+                "cursor-pointer text-sm font-medium transition-colors duration-200 tracking-wide",
+                pathname === "/about" 
+                  ? "text-[#FF5F38]" // Color when active
+                  : "text-white hover:text-[#FF5F38]" // Default Color (White) & Hover Color
+              )}
+            >
               About Us
             </Link>
             
-            {/* 5. Contact Us */}
-            <Link href="/contact" className={getLinkClass("/contact")}>
+            {/* 5. Contact Us - CUSTOM COLOR */}
+            <Link 
+              href="/contact" 
+              className={cn(
+                "cursor-pointer text-sm font-medium transition-colors duration-200 tracking-wide",
+                pathname === "/contact" 
+                  ? "text-[#FF5F38]" // Color when active
+                  : "text-white hover:text-[#FF5F38]" // Default Color (White) & Hover Color
+              )}
+            >
               Contact Us
             </Link>
 
-            {/* 6. Learn From Us Button - More compact */}
+            {/* 6. Learn From Us Button */}
             <Link 
                 href="/learn" 
                 className={cn(
@@ -265,8 +281,29 @@ function Navbar({ className }: { className?: string }) {
                   </div>
               </MobileAccordion>
 
-              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className={cn("text-base font-medium p-2 rounded-lg hover:bg-white/5", pathname === "/about" && "text-[#FF5F38]")}>About Us</Link>
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className={cn("text-base font-medium p-2 rounded-lg hover:bg-white/5", pathname === "/contact" && "text-[#FF5F38]")}>Contact Us</Link>
+              {/* Mobile About Us - Color Updated */}
+              <Link 
+                href="/about" 
+                onClick={() => setMobileMenuOpen(false)} 
+                className={cn(
+                  "text-base font-medium p-2 rounded-lg hover:bg-white/5", 
+                  pathname === "/about" ? "text-[#FF5F38]" : "text-white" // Default white
+                )}
+              >
+                About Us
+              </Link>
+
+              {/* Mobile Contact Us - Color Updated */}
+              <Link 
+                href="/contact" 
+                onClick={() => setMobileMenuOpen(false)} 
+                className={cn(
+                  "text-base font-medium p-2 rounded-lg hover:bg-white/5", 
+                  pathname === "/contact" ? "text-[#FF5F38]" : "text-white" // Default white
+                )}
+              >
+                Contact Us
+              </Link>
               
               <Link href="/learn" onClick={() => setMobileMenuOpen(false)} className="mt-2 text-center w-full py-2.5 rounded-xl bg-[#FF5F38] text-white text-sm font-bold shadow-lg shadow-orange-500/20 active:scale-95 transition-transform">Learn From Us</Link>
             </motion.div>
