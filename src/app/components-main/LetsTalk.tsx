@@ -36,8 +36,8 @@ const ShootingStar = ({
         ease: "linear",
         repeatDelay: Math.random() * 5 + 2, // Randomize re-appearance
       }}
-      // Updated Gradient to Orange/Red
-      className="absolute w-[300px] h-[2px] bg-gradient-to-r from-transparent via-[#FF5F38] to-transparent z-0"
+      // Updated Gradient to Start (#Ff3131) -> End (#ff914d)
+      className="absolute w-[300px] h-[2px] bg-gradient-to-r from-transparent via-[#Ff3131] to-transparent z-0"
     />
   );
 };
@@ -64,8 +64,8 @@ export default function LetsTalk() {
       {/* Background Grids */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none"></div>
       
-      {/* Central Glow Spot - Warm Orange */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#FF5F38]/10 blur-[100px] rounded-full pointer-events-none"></div>
+      {/* Central Glow Spot - Using Start Color */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#Ff3131]/10 blur-[100px] rounded-full pointer-events-none"></div>
 
       {/* Shooting Stars Layer */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -83,17 +83,17 @@ export default function LetsTalk() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-           {/* Badge - Orange Theme */}
-           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#FF5F38]/20 bg-[#FF5F38]/10 text-[#FF5F38] text-xs font-bold uppercase tracking-wider mb-6">
-             <span className="w-2 h-2 rounded-full bg-[#FF5F38] animate-pulse"></span>
+           {/* Badge - Using Start Color */}
+           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#Ff3131]/20 bg-[#Ff3131]/10 text-[#Ff3131] text-xs font-bold uppercase tracking-wider mb-6">
+             <span className="w-2 h-2 rounded-full bg-[#Ff3131] animate-pulse"></span>
              Available for New Projects
            </div>
 
            {/* Heading */}
            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6">
              Have a project in mind? <br />
-             {/* Gradient Text to match Logo */}
-             <span className="bg-gradient-to-r from-[#FF5F38] to-[#FF9068] bg-clip-text text-transparent">
+             {/* Gradient Text: Start Color -> End Color */}
+             <span className="bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">
                Let's build it together.
              </span>
            </h2>
@@ -106,9 +106,9 @@ export default function LetsTalk() {
            {/* Buttons */}
            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
              
-             {/* Primary Button with Magma Conic Gradient */}
-             <Link href="/contact" className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF9068_0%,#FF5F38_50%,#FF9068_100%)]" />
+             {/* Primary Button with Conic Gradient: Start -> End Colors */}
+             <Link href="/contact" className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-[#Ff3131] focus:ring-offset-2 focus:ring-offset-slate-50">
+               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ff914d_0%,#Ff3131_50%,#ff914d_100%)]" />
                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl transition-colors hover:bg-slate-900">
                  Book a Strategy Call
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>

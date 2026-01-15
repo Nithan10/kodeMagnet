@@ -8,13 +8,10 @@ import { CheckCircle2, ScanFace, Camera, Share2, Zap } from "lucide-react";
 import { NavbarDemo } from "../../../app/components-main/Navbar"; 
 import Footer from "@/app/components-main/Footer"; // Imported Footer
 
-// Updated to Brand Orange
-const accentColor = "#ff4d00";
-
 export default function Page() {
   return (
-    // Updated selection color to Orange with White text
-    <main className="min-h-screen bg-neutral-950 text-white overflow-hidden selection:bg-[#ff4d00] selection:text-white">
+    // Updated selection color to Start Color (#Ff3131)
+    <main className="min-h-screen bg-neutral-950 text-white overflow-hidden selection:bg-[#Ff3131] selection:text-white">
       
       {/* 2. PLACE NAVBAR AT THE TOP */}
       <div className="relative z-50">
@@ -28,15 +25,14 @@ export default function Page() {
           {/* Text Content */}
           <div className="space-y-8 z-10 relative">
             <div 
-              className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold text-white mb-4 shadow-[0_0_15px_rgba(255,77,0,0.4)]"
-              style={{ backgroundColor: accentColor }}
+              className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold text-white mb-4 shadow-[0_0_15px_rgba(255,49,49,0.4)] bg-gradient-to-r from-[#Ff3131] to-[#ff914d]"
             >
               The Future of Event Photography
             </div>
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight">
               Snap. Scan. <br />
-              {/* Updated Gradient: Red to Orange */}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2600] to-[#ff9100]">
+              {/* Updated Gradient: Start -> End Color */}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d]">
                 Instant Share.
               </span>
             </h1>
@@ -47,9 +43,8 @@ export default function Page() {
             <div className="flex flex-wrap gap-4">
               <Link 
                 href="/contact" 
-                // Updated Button: Orange bg, White text
-                className="px-8 py-4 rounded-full text-white font-bold text-lg transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,77,0,0.3)]"
-                style={{ backgroundColor: accentColor }}
+                // Gradient Button
+                className="px-8 py-4 rounded-full text-white font-bold text-lg transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,49,49,0.3)] bg-gradient-to-r from-[#Ff3131] to-[#ff914d]"
               >
                 Book Your Event
               </Link>
@@ -62,8 +57,7 @@ export default function Page() {
           {/* Hero Image */}
           <div className="relative z-10 lg:ml-auto mt-10 lg:mt-0">
             <div 
-              className="absolute -inset-4 blur-3xl opacity-20 rounded-full -z-10"
-              style={{ backgroundColor: accentColor }}
+              className="absolute -inset-4 blur-3xl opacity-20 rounded-full -z-10 bg-[#Ff3131]"
             ></div>
             
             <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50">
@@ -75,7 +69,7 @@ export default function Page() {
                 className="object-cover w-full h-full scale-105 hover:scale-100 transition-transform duration-700"
               />
               <div className="absolute bottom-4 right-4 bg-neutral-900/90 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-lg flex items-center gap-4 max-w-[280px]">
-                <ScanFace className="w-10 h-10" style={{ color: accentColor }} />
+                <ScanFace className="w-10 h-10 text-[#Ff3131]" />
                 <div>
                   <p className="text-sm font-bold text-white">Instant Scan</p>
                   <p className="text-xs text-neutral-400">Guests get photos in seconds.</p>
@@ -106,13 +100,13 @@ export default function Page() {
                 title="The Professional Snap"
                 description="Our photographer captures high-quality moments of your guests throughout the event."
               />
-               <ProcessCard 
+                <ProcessCard 
                 icon={<ScanFace className="w-10 h-10 text-white" />}
                 step="02"
                 title="The Unique Scan"
                 description="Guests scan a QR code provided instantly (on a card, screen, or wristband)."
               />
-               <ProcessCard 
+                <ProcessCard 
                 icon={<Share2 className="w-10 h-10 text-white" />}
                 step="03"
                 title="Instant Branded Access"
@@ -176,19 +170,17 @@ export default function Page() {
       {/* ======================= CTA ======================= */}
       <section className="py-24 relative">
         <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl opacity-20 blur-[120px] -z-10 rounded-full"
-            style={{ backgroundColor: accentColor }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl opacity-20 blur-[120px] -z-10 rounded-full bg-[#Ff3131]"
         ></div>
         <div className="max-w-4xl mx-auto text-center px-6 bg-neutral-900/50 border border-white/10 backdrop-blur-lg rounded-3xl p-12 lg:p-20">
-          <Zap className="w-16 h-16 mx-auto mb-8" style={{ color: accentColor }} />
+          <Zap className="w-16 h-16 mx-auto mb-8 text-[#Ff3131]" />
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to modernize your event photography?</h2>
           <p className="text-xl text-neutral-300 mb-10">
             Stop making guests wait days for photos. Give them the instant gratification they expect.
           </p>
           <Link 
                 href="/contact" 
-                className="inline-block px-10 py-5 rounded-full text-white font-bold text-xl transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,77,0,0.3)]"
-                style={{ backgroundColor: accentColor }}
+                className="inline-block px-10 py-5 rounded-full text-white font-bold text-xl transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,49,49,0.3)] bg-gradient-to-r from-[#Ff3131] to-[#ff914d]"
               >
                 Get a Quote Now
           </Link>
@@ -208,12 +200,10 @@ export default function Page() {
 
 const ProcessCard = ({ icon, step, title, description }: { icon: React.ReactNode, step: string, title: string, description: string }) => {
     return (
-      // Updated Hover Border Color
-      <div className="bg-neutral-950 border border-white/10 p-8 rounded-3xl relative flex flex-col items-center text-center z-10 hover:border-[#ff4d00]/50 transition-colors">
+      // Updated Hover Border Color to Gradient approximation (using start color)
+      <div className="bg-neutral-950 border border-white/10 p-8 rounded-3xl relative flex flex-col items-center text-center z-10 hover:border-[#Ff3131]/50 transition-colors">
         <div 
-          // Updated Shadow Color
-          className="w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(255,77,0,0.3)]"
-          style={{ backgroundColor: "#ff4d00" }}
+          className="w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(255,49,49,0.3)] bg-gradient-to-r from-[#Ff3131] to-[#ff914d]"
         >
           {icon}
         </div>
@@ -226,7 +216,7 @@ const ProcessCard = ({ icon, step, title, description }: { icon: React.ReactNode
 
 const FeatureItem = ({ text }: { text: string }) => (
   <li className="flex items-center gap-3 text-lg">
-    <CheckCircle2 className="w-6 h-6 flex-shrink-0" style={{ color: "#ff4d00" }} />
+    <CheckCircle2 className="w-6 h-6 flex-shrink-0 text-[#Ff3131]" />
     <span>{text}</span>
   </li>
 );

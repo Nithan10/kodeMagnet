@@ -25,7 +25,8 @@ const carouselImages = [
 
 export default function WebAppsPage() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-[#FF5F38] selection:text-white overflow-hidden">
+    // Updated Selection Color to Start Color (#Ff3131)
+    <main className="min-h-screen bg-black text-white selection:bg-[#Ff3131] selection:text-white overflow-hidden">
       {/* Navbar */}
       <div className="relative w-full flex items-center justify-center">
          <NavbarDemo />
@@ -39,7 +40,8 @@ export default function WebAppsPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-block px-3 py-1 mb-6 rounded-full border border-[#FF5F38]/30 bg-[#FF5F38]/10 text-[#FF5F38] text-xs font-mono font-bold tracking-widest"
+            // Badge Colors Updated
+            className="inline-block px-3 py-1 mb-6 rounded-full border border-[#Ff3131]/30 bg-[#Ff3131]/10 text-[#Ff3131] text-xs font-mono font-bold tracking-widest"
           >
             WEB APPLICATION DEVELOPMENT
           </motion.div>
@@ -50,7 +52,8 @@ export default function WebAppsPage() {
           >
             More Than Just Websites. <br />
             <span className="text-white">We Build </span>
-            <span className="text-[#FF5F38] underline decoration-wavy decoration-[#FF5F38]/30 underline-offset-8">
+            {/* Gradient Text for Platforms */}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d] underline decoration-wavy decoration-[#Ff3131]/30 underline-offset-8">
               Platforms.
             </span>
           </motion.h1>
@@ -90,10 +93,12 @@ export default function WebAppsPage() {
 
       {/* --- CTA --- */}
       <section className="py-20 relative">
-         <div className="absolute inset-0 bg-[#FF5F38]/5 skew-y-1" />
+         {/* Skewed Background updated to Start Color tint */}
+         <div className="absolute inset-0 bg-[#Ff3131]/5 skew-y-1" />
          <div className="max-w-4xl mx-auto text-center relative z-10 px-6">
             <h2 className="text-4xl font-bold mb-8">Ready to scale?</h2>
-            <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-[#FF5F38] to-[#FF8050] text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(255,95,56,0.4)] transition-all">
+            {/* Gradient Button: Start -> End */}
+            <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-[#Ff3131] to-[#ff914d] text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(255,49,49,0.4)] transition-all">
                Discuss Your Architecture
             </Link>
          </div>
@@ -211,7 +216,8 @@ const AppShowcaseTabs = () => {
                                  key={index}
                                  className={cn(
                                    "w-2 h-2 rounded-full transition-all duration-300",
-                                   index === currentImageIndex ? "bg-[#FF5F38] w-4" : "bg-white/30"
+                                   // Active dot uses Start Color
+                                   index === currentImageIndex ? "bg-[#Ff3131] w-4" : "bg-white/30"
                                  )}
                                />
                              ))}
@@ -256,9 +262,10 @@ const AppShowcaseTabs = () => {
                            <p className="text-neutral-500 text-sm">Last updated: Just now</p>
                         </div>
                         <div className="flex gap-2">
-                           <button className="p-2 bg-neutral-900 rounded-lg border border-white/10 text-neutral-400 hover:text-[#FF5F38] transition-colors"><IconSearch className="w-4 h-4" /></button>
-                           <button className="p-2 bg-neutral-900 rounded-lg border border-white/10 text-neutral-400 hover:text-[#FF5F38] transition-colors"><IconBell className="w-4 h-4" /></button>
-                           <div className="w-8 h-8 rounded-full bg-[#FF5F38] flex items-center justify-center text-white font-bold">JD</div>
+                           <button className="p-2 bg-neutral-900 rounded-lg border border-white/10 text-neutral-400 hover:text-[#Ff3131] transition-colors"><IconSearch className="w-4 h-4" /></button>
+                           <button className="p-2 bg-neutral-900 rounded-lg border border-white/10 text-neutral-400 hover:text-[#Ff3131] transition-colors"><IconBell className="w-4 h-4" /></button>
+                           {/* Avatar using Start Color */}
+                           <div className="w-8 h-8 rounded-full bg-[#Ff3131] flex items-center justify-center text-white font-bold">JD</div>
                         </div>
                      </div>
                      
@@ -270,7 +277,8 @@ const AppShowcaseTabs = () => {
                               <h4 className="text-xl font-bold text-white">
                                  {i === 0 ? "$45,231" : i === 1 ? "12,304" : i === 2 ? "24%" : "98ms"}
                               </h4>
-                              <span className="text-[#FF5F38] text-xs">+12% vs last week</span>
+                              {/* Stat Change Text - Start Color */}
+                              <span className="text-[#Ff3131] text-xs">+12% vs last week</span>
                            </div>
                         ))}
                      </div>
@@ -279,7 +287,7 @@ const AppShowcaseTabs = () => {
                      <div className="flex gap-4 h-full">
                         <div className="flex-1 bg-neutral-900 rounded-xl border border-white/5 p-4 relative overflow-hidden">
                            <h4 className="text-sm font-bold text-white mb-4">Traffic Analysis</h4>
-                           {/* Decorative CSS Chart */}
+                           {/* Decorative CSS Chart - Gradient Bars */}
                            <div className="absolute bottom-0 left-0 right-0 h-32 flex items-end justify-between px-4 gap-1 opacity-80">
                               {[40, 60, 45, 70, 50, 80, 65, 85, 90, 60, 75, 50, 40, 60, 80].map((h, i) => (
                                  <motion.div 
@@ -287,7 +295,8 @@ const AppShowcaseTabs = () => {
                                     initial={{ height: 0 }}
                                     animate={{ height: `${h}%` }}
                                     transition={{ duration: 0.5, delay: i * 0.05 }}
-                                    className="w-full bg-gradient-to-t from-[#FF5F38]/50 to-[#FF5F38] rounded-t-sm" 
+                                    // Gradient: Start -> End
+                                    className="w-full bg-gradient-to-t from-[#Ff3131]/50 to-[#ff914d] rounded-t-sm" 
                                  />
                               ))}
                            </div>
@@ -297,7 +306,8 @@ const AppShowcaseTabs = () => {
                            <div className="space-y-3">
                               {[1,2,3].map((i) => (
                                  <div key={i} className="flex items-center gap-3">
-                                    <div className="w-2 h-2 rounded-full bg-[#FF5F38]" />
+                                    {/* Live Dot using Start Color */}
+                                    <div className="w-2 h-2 rounded-full bg-[#Ff3131]" />
                                     <div className="h-2 w-20 bg-neutral-800 rounded" />
                                     <div className="ml-auto h-2 w-8 bg-neutral-800 rounded" />
                                  </div>
@@ -337,14 +347,17 @@ const AppShowcaseTabs = () => {
                         </div>
                      </div>
 
-                     {/* Column 2 */}
+                     {/* Column 2 - Active Column */}
                      <div className="w-1/3 bg-neutral-900/50 rounded-xl p-3 border border-white/5 flex flex-col gap-3">
                         <div className="flex justify-between items-center px-2">
-                           <span className="text-xs font-bold text-[#FF5F38] uppercase">In Progress</span>
+                           {/* Header Text - Start Color */}
+                           <span className="text-xs font-bold text-[#Ff3131] uppercase">In Progress</span>
                            <IconDotsVertical className="w-4 h-4 text-neutral-600" />
                         </div>
-                        <div className="p-3 bg-neutral-800 rounded border border-[#FF5F38]/30 shadow-lg relative">
-                           <div className="absolute top-3 right-3 w-2 h-2 bg-[#FF5F38] rounded-full animate-pulse" />
+                        {/* Card with Active Border */}
+                        <div className="p-3 bg-neutral-800 rounded border border-[#Ff3131]/30 shadow-lg relative">
+                           {/* Active Dot - Start Color */}
+                           <div className="absolute top-3 right-3 w-2 h-2 bg-[#Ff3131] rounded-full animate-pulse" />
                            <div className="w-10 h-1 bg-green-500 rounded-full mb-2" />
                            <p className="text-sm text-white mb-2">Image Optimization Pipeline</p>
                            <p className="text-xs text-neutral-500">Processing...</p>
@@ -381,8 +394,9 @@ const TabButton = ({ isActive, onClick, label, icon }: { isActive: boolean, onCl
       onClick={onClick}
       className={cn(
          "flex items-center gap-2 px-6 py-3 rounded-full border text-sm font-bold transition-all duration-300",
+         // Active Tab: Gradient Background
          isActive 
-            ? "bg-gradient-to-r from-[#FF5F38] to-[#FF8050] border-transparent text-white shadow-[0_0_15px_rgba(255,95,56,0.3)]" 
+            ? "bg-gradient-to-r from-[#Ff3131] to-[#ff914d] border-transparent text-white shadow-[0_0_15px_rgba(255,49,49,0.3)]" 
             : "bg-transparent border-white/10 text-neutral-400 hover:text-white hover:border-white/30"
       )}
    >
@@ -393,7 +407,8 @@ const TabButton = ({ isActive, onClick, label, icon }: { isActive: boolean, onCl
 
 const FeatureColumn = ({ title, description }: { title: string, description: string }) => (
    <div className="flex flex-col gap-4">
-      <div className="w-10 h-1 bg-gradient-to-r from-[#FF5F38] to-[#FFA050] rounded-full" />
+      {/* Indicator Line: Gradient */}
+      <div className="w-10 h-1 bg-gradient-to-r from-[#Ff3131] to-[#ff914d] rounded-full" />
       <h3 className="text-xl font-bold text-white">{title}</h3>
       <p className="text-neutral-400 leading-relaxed text-sm">{description}</p>
    </div>

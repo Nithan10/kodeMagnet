@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils"; // Ensure you have this utility or replace with standard template literals
+import { cn } from "@/lib/utils"; 
 
 // --- Internal Spotlight Component ---
 const Spotlight = ({
@@ -88,22 +88,24 @@ const RobotAssistant = () => {
           viewBox="0 0 100 120"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-20 h-24 sm:w-[100px] sm:h-[120px] drop-shadow-[0_0_15px_rgba(255,95,56,0.4)]"
+          className="w-20 h-24 sm:w-[100px] sm:h-[120px] drop-shadow-[0_0_15px_rgba(255,49,49,0.4)]"
         >
           <line x1="50" y1="20" x2="50" y2="0" stroke="#737373" strokeWidth="2" />
-          <circle cx="50" cy="0" r="4" fill="#FF5F38" className="animate-pulse" />
+          {/* Antenna Light: Start Color */}
+          <circle cx="50" cy="0" r="4" fill="#Ff3131" className="animate-pulse" />
           <rect x="20" y="20" width="60" height="50" rx="16" fill="#171717" stroke="#404040" strokeWidth="2" />
           <rect x="28" y="32" width="44" height="26" rx="8" fill="#000" />
           <motion.g animate={{ scaleY: isBlinking ? 0.1 : 1 }} style={{ originY: "50%" }}>
-            <rect x="34" y="40" width="10" height="10" rx="2" fill="#FF5F38" className="shadow-[0_0_10px_#FF5F38]" />
-            <rect x="56" y="40" width="10" height="10" rx="2" fill="#FF5F38" className="shadow-[0_0_10px_#FF5F38]" />
+            {/* Eyes: Start Color */}
+            <rect x="34" y="40" width="10" height="10" rx="2" fill="#Ff3131" className="shadow-[0_0_10px_#Ff3131]" />
+            <rect x="56" y="40" width="10" height="10" rx="2" fill="#Ff3131" className="shadow-[0_0_10px_#Ff3131]" />
           </motion.g>
           <path d="M35 70 L30 90 Q50 100 70 90 L65 70 Z" fill="#262626" />
         </svg>
 
-        {/* Scanning Beam Effect */}
+        {/* Scanning Beam Effect - Using Start Color */}
         <motion.div
-          className="absolute top-[60px] sm:top-[80px] left-1/2 -translate-x-1/2 w-32 sm:w-40 h-48 sm:h-64 bg-gradient-to-b from-[#FF5F38]/20 to-transparent"
+          className="absolute top-[60px] sm:top-[80px] left-1/2 -translate-x-1/2 w-32 sm:w-40 h-48 sm:h-64 bg-gradient-to-b from-[#Ff3131]/20 to-transparent"
           style={{ clipPath: "polygon(50% 0, 100% 100%, 0 100%)" }}
           animate={{ opacity: [0.3, 0.6, 0.3] }}
           transition={{ repeat: Infinity, duration: 2 }}
@@ -127,7 +129,7 @@ const HolographicIDE = () => {
         <RobotAssistant />
 
         {/* Main Code Window */}
-        <div className="absolute inset-0 bg-neutral-900/80 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden shadow-2xl shadow-orange-900/20 z-10">
+        <div className="absolute inset-0 bg-neutral-900/80 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden shadow-2xl shadow-red-900/20 z-10">
           {/* Header */}
           <div className="h-8 bg-white/5 border-b border-white/5 flex items-center px-4 gap-2">
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500/50"></div>
@@ -136,21 +138,22 @@ const HolographicIDE = () => {
             <div className="ml-4 text-[9px] sm:text-[10px] text-neutral-500 font-mono">deploy_production.ts</div>
           </div>
 
-          {/* Code Content */}
+          {/* Code Content - Keywords updated to Start Color (#Ff3131) */}
           <div className="p-4 sm:p-6 font-mono text-[10px] sm:text-xs space-y-1 sm:space-y-2 opacity-80 overflow-hidden">
             <div className="flex gap-2 flex-wrap">
-              <span className="text-[#FF5F38]">import</span>
+              <span className="text-[#Ff3131]">import</span>
               <span className="text-white">{`{`} Cloud {`}`}</span>
-              <span className="text-[#FF5F38]">from</span>
-              <span className="text-orange-300 break-all">'@KodeMagnet/core'</span>;
+              <span className="text-[#Ff3131]">from</span>
+              {/* String updated to End Color (#ff914d) for double shade effect */}
+              <span className="text-[#ff914d] break-all">'@KodeMagnet/core'</span>;
             </div>
             <div className="h-2 sm:h-4"></div>
             <div className="pl-0 text-neutral-400">// Initializing Cluster...</div>
             <div className="flex gap-2 flex-wrap">
-              <span className="text-[#FF5F38]">const</span>
+              <span className="text-[#Ff3131]">const</span>
               <span className="text-yellow-300">instance</span>
               <span className="text-white">=</span>
-              <span className="text-[#FF5F38]">new</span>
+              <span className="text-[#Ff3131]">new</span>
               <span className="text-blue-300">Node</span>
               <span className="text-white">({`{`}</span>
             </div>
@@ -165,13 +168,14 @@ const HolographicIDE = () => {
             <div className="text-white">{`});`}</div>
             <div className="h-1 sm:h-2"></div>
             <div className="flex gap-2">
-              <span className="text-[#FF5F38]">await</span>
+              <span className="text-[#Ff3131]">await</span>
               <span className="text-white">instance.deploy();</span>
             </div>
+            {/* Blinking Cursor - Start Color */}
             <motion.div
               animate={{ opacity: [0, 1, 0] }}
               transition={{ repeat: Infinity, duration: 0.8 }}
-              className="w-1.5 h-3 sm:w-2 sm:h-4 bg-[#FF5F38] mt-1 sm:mt-2"
+              className="w-1.5 h-3 sm:w-2 sm:h-4 bg-[#Ff3131] mt-1 sm:mt-2"
             />
           </div>
         </div>
@@ -180,13 +184,14 @@ const HolographicIDE = () => {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-          // Repositioned for mobile: inside bounds (right-2) vs outside bounds (-right-4) on desktop
-          className="absolute right-2 -bottom-8 sm:-right-4 sm:-bottom-6 w-40 sm:w-48 bg-neutral-800/90 border border-[#FF5F38]/30 backdrop-blur-md rounded-lg p-3 sm:p-4 shadow-xl z-30"
+          // Border updated to Start Color
+          className="absolute right-2 -bottom-8 sm:-right-4 sm:-bottom-6 w-40 sm:w-48 bg-neutral-800/90 border border-[#Ff3131]/30 backdrop-blur-md rounded-lg p-3 sm:p-4 shadow-xl z-30"
         >
           <div className="flex items-center gap-3 mb-2">
             <div className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5F38] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#FF5F38]"></span>
+              {/* Ping Animation - Start Color */}
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#Ff3131] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#Ff3131]"></span>
             </div>
             <span className="text-[10px] sm:text-xs font-bold text-white tracking-wide">SYSTEM OPERATIONAL</span>
           </div>
@@ -197,13 +202,14 @@ const HolographicIDE = () => {
               <span className="text-white">99.99%</span>
             </div>
             <div className="w-full bg-neutral-700 h-1 rounded-full overflow-hidden">
-              <div className="w-[99%] h-full bg-[#FF5F38]"></div>
+              {/* Progress Bar - Gradient */}
+              <div className="w-[99%] h-full bg-gradient-to-r from-[#Ff3131] to-[#ff914d]"></div>
             </div>
           </div>
         </motion.div>
 
-        {/* Glow Effect */}
-        <div className="absolute -inset-4 bg-[#FF5F38]/20 blur-3xl rounded-full -z-10"></div>
+        {/* Glow Effect - Start Color */}
+        <div className="absolute -inset-4 bg-[#Ff3131]/20 blur-3xl rounded-full -z-10"></div>
       </motion.div>
     </div>
   );
@@ -213,16 +219,15 @@ const HolographicIDE = () => {
 export default function Hero() {
   return (
     <div className="w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      {/* Spotlights - Adjusted sizes for mobile */}
+      {/* Spotlights - Adjusted sizes for mobile & Fill color */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
-      <Spotlight className="top-20 left-10 md:left-full h-[50vh] md:h-[80vh] w-[90vw] md:w-[50vw]" fill="#FF5F38" />
+      {/* Spotlight using Start Color */}
+      <Spotlight className="top-20 left-10 md:left-full h-[50vh] md:h-[80vh] w-[90vw] md:w-[50vw]" fill="#Ff3131" />
 
       {/* Main Container */}
-      {/* Changed pt-20 to pt-36 to clear navbar on mobile */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-36 pb-16 md:pt-44 md:pb-20 min-h-screen flex flex-col lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10">
         
         {/* Left Column: Text Content */}
-        {/* Order 1 on mobile (first), Order 1 on Desktop (left) */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-1 w-full">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -231,7 +236,8 @@ export default function Hero() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mt-4 lg:mt-0"
           >
             Engineering the <br className="hidden lg:block" />
-            <span className="bg-gradient-to-r from-[#FF5F38] to-[#FF9068] bg-clip-text text-transparent">
+            {/* Gradient Text: Start Color -> End Color */}
+            <span className="bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">
               Digital Future.
             </span>
           </motion.h1>
@@ -253,7 +259,8 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start w-full sm:w-auto"
           >
-            <button className="px-8 py-3 rounded-full bg-[#FF5F38] text-white font-bold text-sm tracking-wide hover:bg-[#E04F2E] transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,95,56,0.3)] w-full sm:w-auto">
+            {/* Gradient Button: Start -> End */}
+            <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#Ff3131] to-[#ff914d] text-white font-bold text-sm tracking-wide hover:opacity-90 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,49,49,0.3)] w-full sm:w-auto">
               Book a Consultation
             </button>
             <button className="px-8 py-3 rounded-full border border-neutral-700 text-white text-sm font-medium hover:bg-neutral-800 transition-colors w-full sm:w-auto">
@@ -263,7 +270,6 @@ export default function Hero() {
         </div>
 
         {/* Right Column: 3D Graphic */}
-        {/* Order 2 on mobile (second), Order 2 on Desktop (right) */}
         <div className="w-full order-2 flex justify-center items-center mt-12 lg:mt-0 mb-12 lg:mb-0">
           <HolographicIDE />
         </div>

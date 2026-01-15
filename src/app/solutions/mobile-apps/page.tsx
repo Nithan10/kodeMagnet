@@ -25,9 +25,10 @@ export default function MobileAppsPage() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   return (
+    // Updated Selection Color to Start Color (#Ff3131)
     <main 
       ref={containerRef} 
-      className="min-h-screen bg-black text-white selection:bg-[#ff4d00] selection:text-white overflow-hidden"
+      className="min-h-screen bg-black text-white selection:bg-[#Ff3131] selection:text-white overflow-hidden"
     >
       {/* --- NAVBAR --- */}
       <div className="relative w-full flex items-center justify-center z-50">
@@ -37,14 +38,15 @@ export default function MobileAppsPage() {
       {/* --- HERO SECTION --- */}
       <section className="relative w-full pt-40 pb-20 px-6">
         {/* Background Gradient (Red/Orange hue) */}
-        <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#ff4d00]/20 to-transparent opacity-30 pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#Ff3131]/20 to-transparent opacity-30 pointer-events-none" />
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
            <div className="flex flex-col gap-6">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="flex items-center gap-2 text-[#ff4d00] font-mono text-sm uppercase tracking-widest"
+                // Text Color Updated
+                className="flex items-center gap-2 text-[#Ff3131] font-mono text-sm uppercase tracking-widest"
               >
                  <IconDeviceMobile className="w-5 h-5" />
                  <span>Mobile First Engineering</span>
@@ -57,7 +59,8 @@ export default function MobileAppsPage() {
                 className="text-5xl md:text-7xl font-bold tracking-tight leading-none"
               >
                 Apps That <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2600] to-[#ff9100]">
+                {/* Gradient Text: Start Color -> End Color */}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d]">
                   Define Brands.
                 </span>
               </motion.h1>
@@ -86,8 +89,8 @@ export default function MobileAppsPage() {
              transition={{ duration: 0.8, ease: "easeOut" }}
              className="relative h-[600px] flex items-center justify-center"
            >
-              {/* Decorative Glow */}
-              <div className="absolute inset-0 bg-[#ff4d00] blur-[100px] opacity-20 rounded-full" />
+              {/* Decorative Glow - Start Color */}
+              <div className="absolute inset-0 bg-[#Ff3131] blur-[100px] opacity-20 rounded-full" />
               
               {/* Phone Frame 1 */}
               <PhoneFrame 
@@ -109,7 +112,7 @@ export default function MobileAppsPage() {
          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                 Choose Your <span className="text-[#ff4d00]">Architecture</span>
+                 Choose Your <span className="text-[#Ff3131]">Architecture</span>
                </h2>
                <p className="text-neutral-400 max-w-2xl mx-auto">
                   We don't believe in one-size-fits-all. We recommend the right tech stack based on your budget, timeline, and performance needs.
@@ -155,12 +158,12 @@ export default function MobileAppsPage() {
             <div className="relative z-10">
                <h2 className="text-3xl md:text-5xl font-bold mb-6">
                  Built for the <br />
-                 <span className="text-[#ff4d00]">Modern User.</span>
+                 <span className="text-[#Ff3131]">Modern User.</span>
                </h2>
                <p className="text-neutral-400 text-lg leading-relaxed mb-8">
                   Users abandon apps that are slow, confusing, or ugly. We obsess over the details—smooth transitions, intuitive gestures, and instant load times—to ensure high retention rates.
                </p>
-               <Link href="/contact" className="inline-flex items-center gap-2 border-b border-[#ff4d00] text-[#ff4d00] pb-1 hover:text-white hover:border-white transition-all">
+               <Link href="/contact" className="inline-flex items-center gap-2 border-b border-[#Ff3131] text-[#Ff3131] pb-1 hover:text-white hover:border-white transition-all">
                   Start your mobile project
                   <IconBolt className="w-4 h-4" />
                </Link>
@@ -201,7 +204,7 @@ const PhoneFrame = ({ className, imageSrc }: { className?: string, imageSrc: str
 }
 
 const TechPill = ({ icon, text }: { icon: React.ReactNode, text: string }) => (
-   <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-neutral-300 text-sm hover:border-[#ff4d00] hover:text-white transition-colors cursor-default">
+   <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-neutral-300 text-sm hover:border-[#Ff3131] hover:text-white transition-colors cursor-default">
       {icon}
       <span>{text}</span>
    </div>
@@ -211,23 +214,25 @@ const ApproachCard = ({ title, subtitle, description, isRecommended }: { title: 
    <div className={cn(
       "p-8 rounded-2xl border transition-all duration-300 relative group overflow-hidden",
       isRecommended 
-        ? "bg-neutral-900/80 border-[#ff4d00]/50 shadow-[0_0_30px_rgba(255,77,0,0.15)]" 
+        // Recommended Border: Start Color
+        ? "bg-neutral-900/80 border-[#Ff3131]/50 shadow-[0_0_30px_rgba(255,49,49,0.15)]" 
         : "bg-neutral-950 border-white/10 hover:border-white/20"
    )}>
       {isRecommended && (
-         <div className="absolute top-4 right-4 px-2 py-1 bg-gradient-to-r from-[#ff4d00] to-[#ff9100] text-white text-[10px] font-bold uppercase tracking-wide rounded">
+         // Popular Badge: Gradient Background
+         <div className="absolute top-4 right-4 px-2 py-1 bg-gradient-to-r from-[#Ff3131] to-[#ff914d] text-white text-[10px] font-bold uppercase tracking-wide rounded">
             Popular
          </div>
       )}
       <h3 className="text-xl font-bold text-white mb-1">{title}</h3>
-      <p className="text-[#ff4d00] text-sm font-mono mb-4">{subtitle}</p>
+      <p className="text-[#Ff3131] text-sm font-mono mb-4">{subtitle}</p>
       <p className="text-neutral-400 text-sm leading-relaxed">{description}</p>
    </div>
 )
 
 const FeatureBox = ({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) => (
-   <div className="p-6 rounded-xl bg-neutral-900 border border-white/5 hover:border-[#ff4d00]/40 transition-colors">
-      <div className="mb-3 text-[#ff4d00]">{icon}</div>
+   <div className="p-6 rounded-xl bg-neutral-900 border border-white/5 hover:border-[#Ff3131]/40 transition-colors">
+      <div className="mb-3 text-[#Ff3131]">{icon}</div>
       <h4 className="font-bold text-white text-sm mb-1">{title}</h4>
       <p className="text-neutral-500 text-xs">{desc}</p>
    </div>

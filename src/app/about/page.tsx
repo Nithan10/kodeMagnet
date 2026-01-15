@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 // --- IMPORTS ---
+// Ensure these paths match your project structure
 import { NavbarDemo } from "../components-main/Navbar";
 import Footer from "../components-main/Footer"; 
 
@@ -20,7 +21,7 @@ export default function AboutPage() {
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]); 
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-neutral-950 text-white selection:bg-[#ff4d00] selection:text-white font-sans">
+    <main ref={containerRef} className="min-h-screen bg-neutral-950 text-white selection:bg-[#Ff3131] selection:text-white font-sans">
       
       <div className="relative z-50">
         <NavbarDemo />
@@ -47,7 +48,8 @@ export default function AboutPage() {
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[1.1]">
             We don't just write code. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#ff4d00] to-white bg-[length:200%_auto] animate-shimmer">
+            {/* GRADIENT TEXT: Start Ff3131 -> End ff914d */}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] via-[#ff914d] to-[#Ff3131] bg-[length:200%_auto] animate-shimmer">
               We engineer futures.
             </span>
           </h1>
@@ -152,17 +154,17 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                </div>
-               {/* Pulsing Dots */}
+               {/* Pulsing Dots - Using #Ff3131 */}
                <div className="relative z-10 w-full h-full">
-                  <MapPin className="absolute top-[30%] left-[25%] text-[#ff4d00] w-6 h-6 animate-bounce" />
-                  <MapPin className="absolute top-[40%] right-[30%] text-[#ff4d00] w-6 h-6 animate-bounce delay-75" />
-                  <MapPin className="absolute bottom-[30%] right-[20%] text-[#ff4d00] w-6 h-6 animate-bounce delay-150" />
+                  <MapPin className="absolute top-[30%] left-[25%] text-[#Ff3131] w-6 h-6 animate-bounce" />
+                  <MapPin className="absolute top-[40%] right-[30%] text-[#Ff3131] w-6 h-6 animate-bounce delay-75" />
+                  <MapPin className="absolute bottom-[30%] right-[20%] text-[#Ff3131] w-6 h-6 animate-bounce delay-150" />
                </div>
             </div>
             <div className="order-1 lg:order-2">
-               <div className="inline-flex items-center gap-2 text-[#ff4d00] mb-4">
-                  <Globe className="w-5 h-5" />
-                  <span className="font-bold tracking-widest uppercase text-sm">Global Reach</span>
+               <div className="inline-flex items-center gap-2 mb-4">
+                  <Globe className="w-5 h-5 text-[#ff914d]" />
+                  <span className="font-bold tracking-widest uppercase text-sm text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d]">Global Reach</span>
                </div>
                <h2 className="text-4xl font-bold mb-6">Code knows no borders.</h2>
                <p className="text-neutral-400 mb-8 leading-relaxed">
@@ -187,24 +189,28 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-16">Our DNA</h2>
           <div className="grid md:grid-cols-3 gap-6 auto-rows-[300px]">
-            <div className="md:col-span-2 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#ff4d00]/50 transition-colors">
+            
+            <div className="md:col-span-2 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#Ff3131]/50 transition-colors">
               <Rocket className="absolute top-0 right-0 w-48 h-48 text-white opacity-5 group-hover:opacity-10 transition-opacity rotate-12" />
               <div className="relative z-10 flex flex-col justify-end h-full">
                 <h3 className="text-3xl font-bold mb-2 text-white">Innovation First</h3>
                 <p className="text-neutral-400">We don't just follow trends; we create products like Kodegraphy and KodeChat to set new standards.</p>
               </div>
             </div>
-            <div className="md:col-span-1 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#ff4d00]/50 transition-colors">
-              <Zap className="w-12 h-12 text-[#ff4d00] mb-6" />
+
+            <div className="md:col-span-1 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#ff914d]/50 transition-colors">
+              <Zap className="w-12 h-12 text-[#Ff3131] mb-6" />
               <h3 className="text-xl font-bold mb-2">Speed & Agility</h3>
               <p className="text-neutral-400">Rapid prototyping and deployment cycles.</p>
             </div>
-            <div className="md:col-span-1 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#ff4d00]/50 transition-colors">
-              <Users className="w-12 h-12 text-[#ff4d00] mb-6" />
+
+            <div className="md:col-span-1 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#ff914d]/50 transition-colors">
+              <Users className="w-12 h-12 text-[#Ff3131] mb-6" />
               <h3 className="text-xl font-bold mb-2">Human Centric</h3>
               <p className="text-neutral-400">Technology designed for people, not robots.</p>
             </div>
-             <div className="md:col-span-2 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#ff4d00]/50 transition-colors">
+
+             <div className="md:col-span-2 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#Ff3131]/50 transition-colors">
               <Award className="absolute top-0 right-0 w-48 h-48 text-white opacity-5 group-hover:opacity-10 transition-opacity -rotate-12" />
               <div className="relative z-10 flex flex-col justify-end h-full">
                 <h3 className="text-3xl font-bold mb-2 text-white">Education at the Core</h3>
@@ -218,7 +224,7 @@ export default function AboutPage() {
       {/* ======================= TEAM SECTION ======================= */}
       <section className="py-24 px-6 bg-neutral-900/20">
          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Minds behind the code - Kode…</h2>
+            <h2 className="text-4xl font-bold mb-4">Minds behind the code</h2>
             <p className="text-neutral-400">A team of dreamers, architects, and problem solvers.</p>
          </div>
          <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
@@ -230,17 +236,16 @@ export default function AboutPage() {
       </section>
 
       {/* ======================= CTA / PRE-FOOTER ======================= */}
-      {/* This section has z-20. To make the Footer robot visible on top of this, Footer needs > z-20 */}
       <section className="py-40 px-6 text-center z-20 bg-neutral-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#ff4d00]/10 to-transparent"></div>
+        {/* Updated Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#Ff3131]/10 to-transparent"></div>
         <h2 className="text-5xl font-bold mb-8 relative z-10">Let's build the impossible.</h2>
-        <Link href="/contact" className="relative z-10 inline-flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-[#ff4d00] hover:text-white transition-all">
+        <Link href="/contact" className="relative z-10 inline-flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gradient-to-r hover:from-[#Ff3131] hover:to-[#ff914d] hover:text-white transition-all border border-transparent hover:border-white/20">
            Start Project <ArrowRight className="w-4 h-4"/>
         </Link>
       </section>
 
       {/* ======================= FOOTER COMPONENT ======================= */}
-      {/* FIX: Wrapped Footer in z-30 to sit ABOVE the CTA section so the robot can peek over */}
       <div className="relative z-30">
         <Footer />
       </div>
@@ -259,19 +264,19 @@ const StickyScrollSection = () => {
       title: "Software Solutions",
       description: "We build robust, scalable web and mobile applications. From sleek marketing websites to complex dashboards and AI-powered tools.",
       image: "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?q=80&w=1470&auto=format&fit=crop",
-      color: "#ff4d00" 
+      color: "#Ff3131" // Primary Red
     },
     {
       title: "Our Product Suite",
       description: "CodeLeads (CRM), Kodegraphy (Event Tech), and KodeChat (Automation) are live examples of our engineering prowess.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop",
-      color: "#ff4d00" 
+      color: "#ff914d" // Secondary Orange
     },
     {
       title: "Hire, Train, Deploy",
       description: "The KodeMagnet Academy is a pipeline. We identify raw talent, train them on our LMS, and deploy them to top companies.",
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop",
-      color: "#ff2600" 
+      color: "#Ff3131" // Back to Red
     },
   ];
 
@@ -289,10 +294,10 @@ const StickyScrollSection = () => {
            <div className="flex flex-col">
               {content.map((item, index) => (
                  <StickyItem 
-                    key={index} 
-                    item={item} 
-                    index={index} 
-                    setActiveIndex={setActiveIndex} 
+                   key={index} 
+                   item={item} 
+                   index={index} 
+                   setActiveIndex={setActiveIndex} 
                  />
               ))}
               <div className="h-[20vh]"></div>
@@ -347,7 +352,7 @@ const StickyItem = ({ item, index, setActiveIndex }: { item: any, index: number,
   }, [isInView, index, setActiveIndex]);
 
   return (
-    <div ref={ref} className="min-h-[80vh] flex flex-col justify-center border-l-2 border-white/10 pl-10 transition-colors duration-500" style={{ borderColor: isInView ? item.color : 'rgba(255,255,255,0.1)' }}>
+    <div ref={ref} className="min-h-[80vh] flex flex-col justify-center border-l-2 pl-10 transition-all duration-500" style={{ borderColor: isInView ? item.color : 'rgba(255,255,255,0.1)' }}>
       <h3 className="text-4xl font-bold mb-6 transition-colors duration-300" style={{ color: isInView ? item.color : 'white' }}>{item.title}</h3>
       <p className="text-xl text-neutral-400 leading-relaxed max-w-lg">{item.description}</p>
     </div>
@@ -361,8 +366,10 @@ const TimelineItem = ({ year, title, desc }: { year: string, title: string, desc
       viewport={{ once: true }}
       className="relative pl-8 md:pl-12"
    >
-      <div className="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#ff4d00] shadow-[0_0_10px_#ff4d00]"></div>
-      <span className="text-sm font-bold text-[#ff4d00] mb-1 block tracking-wider">{year}</span>
+      {/* Gradient Dot */}
+      <div className="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-gradient-to-b from-[#Ff3131] to-[#ff914d] shadow-[0_0_10px_#Ff3131]"></div>
+      {/* Gradient Text for Year */}
+      <span className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d] mb-1 block tracking-wider">{year}</span>
       <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
       <p className="text-neutral-400 leading-relaxed max-w-lg">{desc}</p>
    </motion.div>
@@ -383,7 +390,7 @@ const StatCard = ({ number, label }: { number: string, label: string }) => (
 
 const TechIcon = ({ icon, label }: { icon: React.ReactNode, label: string }) => (
    <div className="flex items-center gap-3 px-6 py-3 bg-neutral-900 border border-white/10 rounded-full min-w-fit">
-      <span className="text-[#ff4d00]">{icon}</span>
+      <span className="text-[#Ff3131]">{icon}</span>
       <span className="font-medium text-sm">{label}</span>
    </div>
 );
@@ -399,6 +406,6 @@ const TeamMember = ({ name, role }: { name: string, role: string }) => (
          />
       </div>
       <h3 className="text-lg font-bold text-white">{name}</h3>
-      <p className="text-sm text-[#ff4d00]">{role}</p>
+      <p className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d] font-bold">{role}</p>
    </div>
 );

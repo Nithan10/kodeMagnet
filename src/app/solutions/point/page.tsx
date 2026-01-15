@@ -8,7 +8,8 @@ import Footer from "@/app/components-main/Footer";
 
 export default function PointSolutionsPage() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-[#FF5F38] selection:text-white">
+    // Updated Selection Color to Start Color (#Ff3131)
+    <main className="min-h-screen bg-black text-white selection:bg-[#Ff3131] selection:text-white">
       {/* Navbar Wrapper */}
       <div className="relative w-full flex items-center justify-center">
          <NavbarDemo />
@@ -22,7 +23,7 @@ export default function PointSolutionsPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-6xl font-bold tracking-tight mb-6"
           >
-            Point <span className="text-[#FF5F38]">Solutions</span>
+            Point <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d]">Solutions</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -82,11 +83,12 @@ export default function PointSolutionsPage() {
              initial={{ opacity: 0, x: 50 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 0.8 }}
-             className="relative w-full h-[500px] lg:h-[600px] rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-900/20 to-black border border-white/10 shadow-[0_0_50px_rgba(255,95,56,0.05)] flex items-center justify-center"
+             className="relative w-full h-[500px] lg:h-[600px] rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-900/20 to-black border border-white/10 shadow-[0_0_50px_rgba(255,49,49,0.05)] flex items-center justify-center"
           >
              {/* Simple Animated Robot SVG Placeholder */}
              <div className="relative w-64 h-64">
-                <div className="absolute inset-0 bg-[#FF5F38]/10 rounded-full blur-xl"></div>
+                {/* Glow updated to Start Color */}
+                <div className="absolute inset-0 bg-[#Ff3131]/10 rounded-full blur-xl"></div>
                 <svg 
                    className="relative w-full h-full"
                    viewBox="0 0 200 200"
@@ -94,35 +96,35 @@ export default function PointSolutionsPage() {
                    xmlns="http://www.w3.org/2000/svg"
                 >
                    {/* Robot Head */}
-                   <rect x="70" y="50" width="60" height="70" rx="15" fill="url(#gradient1)" stroke="#FF5F38" strokeWidth="2"/>
+                   <rect x="70" y="50" width="60" height="70" rx="15" fill="url(#gradient1)" stroke="#Ff3131" strokeWidth="2"/>
                    
                    {/* Robot Eyes */}
-                   <circle cx="85" cy="75" r="8" fill="#FF5F38" className="animate-pulse"/>
-                   <circle cx="115" cy="75" r="8" fill="#FF5F38" className="animate-pulse"/>
+                   <circle cx="85" cy="75" r="8" fill="#Ff3131" className="animate-pulse"/>
+                   <circle cx="115" cy="75" r="8" fill="#Ff3131" className="animate-pulse"/>
                    
                    {/* Robot Antenna */}
-                   <rect x="97" y="30" width="6" height="20" fill="#FF5F38" rx="3"/>
-                   <circle cx="100" cy="25" r="10" fill="#FF5F38" className="animate-ping" style={{animationDuration: '2s'}}/>
+                   <rect x="97" y="30" width="6" height="20" fill="#Ff3131" rx="3"/>
+                   <circle cx="100" cy="25" r="10" fill="#Ff3131" className="animate-ping" style={{animationDuration: '2s'}}/>
                    
                    {/* Robot Body */}
-                   <rect x="60" y="130" width="80" height="40" rx="10" fill="url(#gradient2)" stroke="#FF5F38" strokeWidth="2"/>
+                   <rect x="60" y="130" width="80" height="40" rx="10" fill="url(#gradient2)" stroke="#Ff3131" strokeWidth="2"/>
                    
                    <defs>
                      <linearGradient id="gradient1" x1="70" y1="50" x2="130" y2="120" gradientUnits="userSpaceOnUse">
-                       <stop stopColor="#FF5F38" stopOpacity="0.2"/>
-                       <stop offset="1" stopColor="#FF5F38" stopOpacity="0.05"/>
+                       <stop stopColor="#Ff3131" stopOpacity="0.2"/>
+                       <stop offset="1" stopColor="#Ff3131" stopOpacity="0.05"/>
                      </linearGradient>
                      <linearGradient id="gradient2" x1="60" y1="130" x2="140" y2="170" gradientUnits="userSpaceOnUse">
-                       <stop stopColor="#FF5F38" stopOpacity="0.2"/>
-                       <stop offset="1" stopColor="#FF5F38" stopOpacity="0.05"/>
+                       <stop stopColor="#Ff3131" stopOpacity="0.2"/>
+                       <stop offset="1" stopColor="#Ff3131" stopOpacity="0.05"/>
                      </linearGradient>
                    </defs>
                 </svg>
                 
-                {/* Floating elements */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#FF5F38] rounded-full animate-bounce"></div>
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#FF5F38] rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                <div className="absolute top-1/2 -right-4 w-3 h-3 bg-[#FF5F38] rounded-full animate-bounce" style={{animationDelay: '0.4s'}}></div>
+                {/* Floating elements - Start Color */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#Ff3131] rounded-full animate-bounce"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#Ff3131] rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                <div className="absolute top-1/2 -right-4 w-3 h-3 bg-[#Ff3131] rounded-full animate-bounce" style={{animationDelay: '0.4s'}}></div>
              </div>
 
              {/* Aesthetic Details around the frame */}
@@ -131,15 +133,15 @@ export default function PointSolutionsPage() {
                 <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
              </div>
-             <div className="absolute bottom-6 right-6 px-4 py-2 bg-black/60 backdrop-blur-md rounded-lg border border-[#FF5F38]/20 text-[#FF5F38] text-xs font-mono">
+             <div className="absolute bottom-6 right-6 px-4 py-2 bg-black/60 backdrop-blur-md rounded-lg border border-[#Ff3131]/20 text-[#Ff3131] text-xs font-mono">
                 System Status: ONLINE
              </div>
              
              {/* Animated grid background */}
              <div className="absolute inset-0 opacity-10">
                 <div className="absolute inset-0" style={{
-                  backgroundImage: `linear-gradient(to right, #FF5F38 1px, transparent 1px),
-                                   linear-gradient(to bottom, #FF5F38 1px, transparent 1px)`,
+                  backgroundImage: `linear-gradient(to right, #Ff3131 1px, transparent 1px),
+                                    linear-gradient(to bottom, #Ff3131 1px, transparent 1px)`,
                   backgroundSize: '50px 50px'
                 }}></div>
              </div>
@@ -169,14 +171,15 @@ const AccordionItem = ({ title, children, number, isOpen: defaultOpen = false }:
         className="w-full flex items-center justify-between py-6 group text-left focus:outline-none"
       >
         <div className="flex items-center gap-6">
-          <span className={`font-mono text-sm ${isOpen ? 'text-[#FF5F38]' : 'text-neutral-600'} transition-colors duration-300`}>
+          <span className={`font-mono text-sm ${isOpen ? 'text-[#Ff3131]' : 'text-neutral-600'} transition-colors duration-300`}>
             {number}
           </span>
           <span className={`text-xl font-medium ${isOpen ? 'text-white' : 'text-neutral-400'} group-hover:text-white transition-colors duration-300`}>
             {title}
           </span>
         </div>
-        <div className={`p-2 rounded-full border ${isOpen ? 'border-[#FF5F38] text-[#FF5F38]' : 'border-white/10 text-white'} transition-all duration-300`}>
+        {/* Icon & Border color using Start Color */}
+        <div className={`p-2 rounded-full border ${isOpen ? 'border-[#Ff3131] text-[#Ff3131]' : 'border-white/10 text-white'} transition-all duration-300`}>
            {isOpen ? <IconMinus className="w-4 h-4" /> : <IconPlus className="w-4 h-4" />}
         </div>
       </button>
@@ -190,9 +193,10 @@ const AccordionItem = ({ title, children, number, isOpen: defaultOpen = false }:
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="pl-12 pr-4 pb-8 text-neutral-400 leading-relaxed text-sm md:text-base border-l border-[#FF5F38]/20 ml-3">
+            {/* Border Left using Start Color */}
+            <div className="pl-12 pr-4 pb-8 text-neutral-400 leading-relaxed text-sm md:text-base border-l border-[#Ff3131]/20 ml-3">
               {children}
-              <div className="mt-4 flex items-center gap-2 text-[#FF5F38] text-xs font-bold uppercase tracking-wider cursor-pointer hover:underline">
+              <div className="mt-4 flex items-center gap-2 text-[#Ff3131] text-xs font-bold uppercase tracking-wider cursor-pointer hover:underline">
                 Explore Solution <IconArrowRight className="w-4 h-4" />
               </div>
             </div>

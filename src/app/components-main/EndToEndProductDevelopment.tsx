@@ -73,7 +73,7 @@ export default function EndToEndProductDevelopment() {
          {/* Header */}
          <div className="mb-20">
              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-               End-to-End <span className="bg-gradient-to-r from-[#FF5F38] to-[#FF9068] bg-clip-text text-transparent">Product Development</span>
+               End-to-End <span className="bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">Product Development</span>
              </h2>
              <p className="text-neutral-400 max-w-2xl text-lg">
                Our product engineering team turns revolutionary ideas into world-class products and platforms. We handle the complexity, so you can focus on the vision.
@@ -91,7 +91,6 @@ export default function EndToEndProductDevelopment() {
                  // Use min-h-screen or large height to force scrolling
                  className="min-h-[70vh] flex flex-col justify-center mb-10 group"
                >
-                 {/* REMOVED: The circular numbered badge div was here */}
 
                  <motion.h2
                    initial={{ opacity: 0, x: -20 }}
@@ -112,7 +111,7 @@ export default function EndToEndProductDevelopment() {
                    className={cn(
                        "text-lg max-w-md mt-6 leading-relaxed border-l-2 pl-6 transition-all duration-500",
                          activeCard === index 
-                           ? "text-neutral-300 border-[#FF5F38]" // Orange Border
+                           ? "text-neutral-300 border-[#Ff3131]" // Using Start Color for border
                            : "text-neutral-700 border-neutral-800"
                    )}
                  >
@@ -128,8 +127,11 @@ export default function EndToEndProductDevelopment() {
                        className="object-cover" 
                      />
                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                     <div className="absolute bottom-4 left-4 text-xs font-mono text-[#FF5F38]">
-                        {item.tag}
+                     <div className="absolute bottom-4 left-4 text-xs font-mono font-bold">
+                        {/* Gradient Text for Tag */}
+                        <span className="bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">
+                          {item.tag}
+                        </span>
                      </div>
                  </div>
 
@@ -145,9 +147,11 @@ export default function EndToEndProductDevelopment() {
                "bg-neutral-950 border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
              )}
            >
-             {/* Decorative UI Elements - ORANGE CORNERS */}
-             <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-[#FF5F38] z-20 rounded-tl-lg"></div>
-             <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-[#FF5F38] z-20 rounded-br-lg"></div>
+             {/* Decorative UI Elements - Gradient Theme Corners */}
+             {/* Top Left: Start Color */}
+             <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-[#Ff3131] z-20 rounded-tl-lg"></div>
+             {/* Bottom Right: End Color */}
+             <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-[#ff914d] z-20 rounded-br-lg"></div>
 
              <AnimatePresence mode="popLayout">
                {content.map((item, index) => (
@@ -167,12 +171,12 @@ export default function EndToEndProductDevelopment() {
                         className="object-cover"
                      />
                      
-                     {/* Scanning Line Animation - ORANGE */}
+                     {/* Scanning Line Animation - Gradient */}
                      <motion.div 
                        initial={{ top: "-10%" }}
                        animate={{ top: "110%" }}
                        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                       className="absolute left-0 right-0 h-1 bg-[#FF5F38] shadow-[0_0_20px_#FF5F38] z-10 opacity-50"
+                       className="absolute left-0 right-0 h-1 bg-gradient-to-r from-[#Ff3131] to-[#ff914d] shadow-[0_0_20px_#Ff3131] z-10 opacity-50"
                      />
 
                      {/* Dark Gradient Overlay */}
@@ -186,11 +190,11 @@ export default function EndToEndProductDevelopment() {
                        className="absolute bottom-8 left-8 z-10 bg-black/50 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full flex items-center gap-3"
                      >
                        <div className="relative flex h-3 w-3">
-                          {/* Ping - ORANGE */}
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5F38] opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-3 w-3 bg-[#FF5F38]"></span>
+                          {/* Ping - Start Color */}
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#Ff3131] opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-3 w-3 bg-[#Ff3131]"></span>
                         </div>
-                       <span className="text-[#FF5F38] font-mono text-xs font-bold tracking-wider">
+                       <span className="font-mono text-xs font-bold tracking-wider bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">
                          {item.tag}
                        </span>
                      </motion.div>

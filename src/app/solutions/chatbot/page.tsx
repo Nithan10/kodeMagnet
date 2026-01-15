@@ -16,8 +16,8 @@ import { cn } from "@/lib/utils";
 
 export default function ChatbotSolutionsPage() {
   return (
-    // Updated selection color to Orange
-    <main className="min-h-screen bg-black text-white selection:bg-[#ff4d00] selection:text-white overflow-hidden">
+    // Updated selection color to Start Color (#Ff3131)
+    <main className="min-h-screen bg-black text-white selection:bg-[#Ff3131] selection:text-white overflow-hidden">
       {/* Navbar */}
       <div className="relative w-full flex items-center justify-center z-50">
          <NavbarDemo />
@@ -25,8 +25,8 @@ export default function ChatbotSolutionsPage() {
 
       {/* --- HERO SECTION WITH LIVE DEMO --- */}
       <section className="relative w-full pt-40 pb-20 px-6">
-        {/* Background Gradients - Updated to Red/Orange */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#ff4d00]/20 blur-[120px] rounded-full pointer-events-none opacity-40" />
+        {/* Background Gradients - Updated to Start Color */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#Ff3131]/20 blur-[120px] rounded-full pointer-events-none opacity-40" />
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
            
@@ -36,7 +36,7 @@ export default function ChatbotSolutionsPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 // Updated Text Color
-                className="flex items-center gap-2 text-[#ff4d00] font-mono text-sm uppercase tracking-widest"
+                className="flex items-center gap-2 text-[#Ff3131] font-mono text-sm uppercase tracking-widest"
               >
                  <IconMessageChatbot className="w-5 h-5" />
                  <span>Next-Gen Conversational AI</span>
@@ -50,8 +50,8 @@ export default function ChatbotSolutionsPage() {
               >
                 Talk to Your <br />
                 <span className="text-white">Customers </span>
-                {/* Updated Gradient Text */}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2600] to-[#ff9100]">
+                {/* Updated Gradient Text: Start Color -> End Color */}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d]">
                   24/7.
                 </span>
               </motion.h1>
@@ -66,12 +66,12 @@ export default function ChatbotSolutionsPage() {
               </motion.p>
               
               <div className="flex flex-wrap gap-4 pt-2">
-                 {/* Updated Button to Orange with White Text */}
-                 <Link href="/contact" className="px-6 py-3 bg-[#ff4d00] text-white font-bold rounded-lg hover:bg-[#ff2600] transition-colors shadow-[0_0_20px_rgba(255,77,0,0.3)]">
-                    Build My Agent
+                 {/* Updated Button to Gradient Background */}
+                 <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-[#Ff3131] to-[#ff914d] text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(255,49,49,0.3)] transition-all">
+                   Build My Agent
                  </Link>
                  <Link href="#features" className="px-6 py-3 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-colors">
-                    How It Works
+                   How It Works
                  </Link>
               </div>
            </div>
@@ -85,7 +85,7 @@ export default function ChatbotSolutionsPage() {
            >
               <ChatSimulation />
               {/* Decorative Elements around chat - Updated Glow */}
-              <div className="absolute -z-10 -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br from-[#ff4d00] to-red-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+              <div className="absolute -z-10 -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br from-[#Ff3131] to-[#ff914d] rounded-full blur-2xl opacity-20 animate-pulse"></div>
            </motion.div>
 
         </div>
@@ -96,26 +96,26 @@ export default function ChatbotSolutionsPage() {
          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                 Beyond Basic <span className="text-[#ff4d00]">Scripting</span>
+                 Beyond Basic <span className="text-[#Ff3131]">Scripting</span>
                </h2>
                <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
-                  Old chatbots were frustrating decision trees. Our AI agents are powered by Large Language Models (LLMs) like GPT-4, allowing for human-like fluidity.
+                 Old chatbots were frustrating decision trees. Our AI agents are powered by Large Language Models (LLMs) like GPT-4, allowing for human-like fluidity.
                </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                <FeatureCard 
-                  icon={<IconBrain className="w-10 h-10 text-[#ff4d00]" />}
+                  icon={<IconBrain className="w-10 h-10 text-[#Ff3131]" />}
                   title="Context Awareness"
                   description="The bot remembers previous messages in the conversation, allowing for natural follow-up questions and complex problem solving."
                />
                <FeatureCard 
-                  icon={<IconApi className="w-10 h-10 text-[#ff4d00]" />}
+                  icon={<IconApi className="w-10 h-10 text-[#Ff3131]" />}
                   title="Seamless Integrations"
                   description="Connects directly to your CRM, Calendar, and Database. The bot can check order status, book appointments, or update user records."
                />
                <FeatureCard 
-                  icon={<IconLanguage className="w-10 h-10 text-[#ff4d00]" />}
+                  icon={<IconLanguage className="w-10 h-10 text-[#Ff3131]" />}
                   title="95+ Languages"
                   description="Instantly scale your support globally. Our agents automatically detect the user's language and respond fluently."
                />
@@ -125,8 +125,8 @@ export default function ChatbotSolutionsPage() {
 
       {/* --- USE CASES --- */}
       <section className="py-24 px-6 relative overflow-hidden">
-         {/* Side Glow Line - Updated */}
-         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-[#ff4d00] shadow-[0_0_20px_#ff4d00]" />
+         {/* Side Glow Line - Updated to Start Color */}
+         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-[#Ff3131] shadow-[0_0_20px_#Ff3131]" />
          
          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -156,8 +156,8 @@ export default function ChatbotSolutionsPage() {
                <div className="absolute inset-0 bg-grid-white/[0.02]" />
                
                {/* Central Node - Updated Colors */}
-               <div className="relative z-10 w-24 h-24 rounded-full bg-[#ff4d00]/10 border border-[#ff4d00] flex items-center justify-center shadow-[0_0_30px_rgba(255,77,0,0.2)]">
-                  <IconBrain className="w-12 h-12 text-[#ff4d00]" />
+               <div className="relative z-10 w-24 h-24 rounded-full bg-[#Ff3131]/10 border border-[#Ff3131] flex items-center justify-center shadow-[0_0_30px_rgba(255,49,49,0.2)]">
+                  <IconBrain className="w-12 h-12 text-[#Ff3131]" />
                </div>
 
                {/* Satellites */}
@@ -226,8 +226,8 @@ const ChatSimulation = () => {
        {/* Header */}
        <div className="h-14 bg-neutral-950 border-b border-white/10 flex items-center px-4 justify-between">
           <div className="flex items-center gap-3">
-             {/* Updated Avatar Color */}
-             <div className="w-8 h-8 rounded-full bg-[#ff4d00] flex items-center justify-center">
+             {/* Updated Avatar Color to Start Color */}
+             <div className="w-8 h-8 rounded-full bg-[#Ff3131] flex items-center justify-center">
                 <IconMessageChatbot className="w-5 h-5 text-white" />
              </div>
              <div>
@@ -254,8 +254,8 @@ const ChatSimulation = () => {
                       "max-w-[85%] p-3 text-sm rounded-2xl shadow-sm",
                       msg.role === 'bot' 
                         ? "bg-neutral-800 text-white rounded-tl-none self-start border border-white/5" 
-                        // Updated User Bubble: Orange background, White text
-                        : "bg-[#ff4d00] text-white rounded-tr-none self-end font-medium"
+                        // Updated User Bubble: Gradient Background
+                        : "bg-gradient-to-r from-[#Ff3131] to-[#ff914d] text-white rounded-tr-none self-end font-medium"
                    )}
                 >
                    {msg.text}
@@ -281,8 +281,8 @@ const ChatSimulation = () => {
           <div className="w-full h-10 bg-neutral-900 rounded-full border border-white/10 flex items-center px-4 justify-between opacity-50">
              <span className="text-xs text-neutral-500">Type a message...</span>
              {/* Updated Arrow Button */}
-             <div className="w-6 h-6 rounded-full bg-[#ff4d00]/20 flex items-center justify-center">
-                <IconArrowRight className="w-3 h-3 text-[#ff4d00]" />
+             <div className="w-6 h-6 rounded-full bg-[#Ff3131]/20 flex items-center justify-center">
+                <IconArrowRight className="w-3 h-3 text-[#Ff3131]" />
              </div>
           </div>
        </div>
@@ -292,12 +292,12 @@ const ChatSimulation = () => {
 
 // 2. FEATURE CARD
 const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
-   // Updated Hover Border Color
-   <div className="p-8 rounded-2xl bg-neutral-900/50 border border-white/10 hover:border-[#ff4d00]/40 transition-all duration-300 group hover:-translate-y-1">
-      <div className="mb-6 p-3 bg-black rounded-xl w-fit border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_20px_rgba(255,77,0,0.15)]">
+   // Updated Hover Border Color using Start Color
+   <div className="p-8 rounded-2xl bg-neutral-900/50 border border-white/10 hover:border-[#Ff3131]/40 transition-all duration-300 group hover:-translate-y-1">
+      <div className="mb-6 p-3 bg-black rounded-xl w-fit border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_20px_rgba(255,49,49,0.15)]">
          {icon}
       </div>
-      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#ff4d00] transition-colors">{title}</h3>
+      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#Ff3131] transition-colors">{title}</h3>
       <p className="text-neutral-400 leading-relaxed text-sm">{description}</p>
    </div>
 )
@@ -306,7 +306,7 @@ const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode, titl
 const UseCaseRow = ({ title, desc }: { title: string, desc: string }) => (
    <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
       {/* Updated Dot Color */}
-      <div className="mt-1 w-2 h-2 rounded-full bg-[#ff4d00] shadow-[0_0_10px_#ff4d00]" />
+      <div className="mt-1 w-2 h-2 rounded-full bg-[#Ff3131] shadow-[0_0_10px_#Ff3131]" />
       <div>
          <h4 className="text-lg font-bold text-white">{title}</h4>
          <p className="text-neutral-400 text-sm">{desc}</p>

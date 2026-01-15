@@ -68,7 +68,6 @@ const Counter = ({ value }: { value: number }) => {
 // --- Main Stats Component ---
 export default function StatsSection() {
   return (
-    // REMOVED: border-t border-white/5
     <div className="w-full bg-black py-20 relative overflow-hidden">
       
       {/* Background Decor: Subtle Grid */}
@@ -88,18 +87,20 @@ export default function StatsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative flex flex-col items-center justify-center py-6 px-4 group"
             >
-              {/* Hover Glow Effect - Updated to Orange */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#FF5F38]/0 via-[#FF5F38]/5 to-[#FF5F38]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              {/* Hover Glow Effect - Gradient Start to End */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#Ff3131]/0 via-[#Ff3131]/5 to-[#ff914d]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
               {/* Number with Counter */}
               <div className="text-4xl md:text-5xl font-bold text-white mb-2 flex items-baseline tracking-tighter">
                 <Counter value={stat.value} />
-                {/* Suffix Color - Orange */}
-                <span className="text-[#FF5F38] ml-1">{stat.suffix}</span>
+                {/* Suffix Color - Gradient Text */}
+                <span className="ml-1 text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d]">
+                  {stat.suffix}
+                </span>
               </div>
 
-              {/* Label - Orange */}
-              <p className="text-sm font-bold uppercase tracking-widest text-[#FF5F38] mb-1">
+              {/* Label - Gradient Text */}
+              <p className="text-sm font-bold uppercase tracking-widest mb-1 text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] to-[#ff914d]">
                 {stat.label}
               </p>
 

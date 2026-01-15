@@ -16,11 +16,7 @@ import {
   Instagram
 } from "lucide-react";
 import { NavbarDemo } from "../components-main/Navbar";
-// 1. Import Footer
 import Footer from "../components-main/Footer";
-
-// Updated Accent Color Variable
-const accentColor = "#FF5F38";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -37,9 +33,8 @@ export default function ContactPage() {
   };
 
   return (
-    // Updated Selection Color to Orange
-    // Removed 'overflow-hidden' to allow scrolling to the Footer
-    <main className="min-h-screen bg-neutral-950 text-white selection:bg-[#FF5F38] selection:text-white font-sans relative">
+    // Selection color set to the starting Red (#Ff3131)
+    <main className="min-h-screen bg-neutral-950 text-white selection:bg-[#Ff3131] selection:text-white font-sans relative">
       
       <div className="relative z-50">
         <NavbarDemo />
@@ -47,9 +42,10 @@ export default function ContactPage() {
 
       {/* ======================= BACKGROUND FX ======================= */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        {/* Updated Blob to Orange */}
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#FF5F38]/10 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/10 blur-[120px] rounded-full"></div>
+        {/* Top Left Blob: Start Color (Red) */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#Ff3131]/10 blur-[120px] rounded-full"></div>
+        {/* Bottom Right Blob: End Color (Orange) */}
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#ff914d]/10 blur-[120px] rounded-full"></div>
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
       </div>
 
@@ -63,8 +59,8 @@ export default function ContactPage() {
         >
            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
              Let's build something <br />
-             {/* Gradient Text Updated to Orange */}
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FF5F38] to-white animate-shimmer bg-[length:200%_auto]">
+             {/* Gradient Text: Ff3131 -> ff914d */}
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#Ff3131] via-[#ff914d] to-[#Ff3131] animate-shimmer bg-[length:200%_auto]">
                extraordinary.
              </span>
            </h1>
@@ -105,42 +101,42 @@ export default function ContactPage() {
                     <ArrowRight className="w-5 h-5 text-[#25D366] group-hover:translate-x-1 transition-transform" />
                  </Link>
 
-                 {/* Calendar Card (Kept Blue for Distinction) */}
+                 {/* Book a Call Card (Updated to Theme Colors) */}
                  <Link 
                    href="#" 
-                   className="group flex items-center justify-between p-6 bg-blue-500/10 border border-blue-500/20 rounded-2xl hover:bg-blue-500/20 transition-all cursor-pointer"
+                   className="group flex items-center justify-between p-6 bg-[#Ff3131]/10 border border-[#Ff3131]/20 rounded-2xl hover:bg-[#Ff3131]/20 transition-all cursor-pointer"
                  >
                     <div className="flex items-center gap-4">
-                       <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                       <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#Ff3131] to-[#ff914d] flex items-center justify-center text-white">
                           <Calendar className="w-6 h-6" />
                        </div>
                        <div>
-                          <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Book a Call</h4>
+                          <h4 className="text-lg font-bold text-white group-hover:text-[#ff914d] transition-colors">Book a Call</h4>
                           <p className="text-sm text-neutral-400">15-min discovery chat</p>
                        </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-blue-500 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-5 h-5 text-[#Ff3131] group-hover:translate-x-1 transition-transform" />
                  </Link>
              </div>
 
-             {/* 2. Traditional Contact Info - Updated Icons to Orange */}
+             {/* 2. Traditional Contact Info */}
              <div className="bg-neutral-900/50 border border-white/10 p-8 rounded-3xl space-y-6">
                  <div className="flex items-start gap-4">
-                    <Mail className="w-6 h-6 text-[#FF5F38] mt-1" />
+                    <Mail className="w-6 h-6 text-[#Ff3131] mt-1" />
                     <div>
                        <p className="text-sm text-neutral-500 mb-1">Email us</p>
-                       <a href="mailto:hello@KodeMagnet.com" className="text-lg font-bold hover:text-[#FF5F38] transition-colors">hello@KodeMagnet.com</a>
+                       <a href="mailto:hello@KodeMagnet.com" className="text-lg font-bold hover:text-[#ff914d] transition-colors">hello@KodeMagnet.com</a>
                     </div>
                  </div>
                  <div className="flex items-start gap-4">
-                    <Phone className="w-6 h-6 text-[#FF5F38] mt-1" />
+                    <Phone className="w-6 h-6 text-[#Ff3131] mt-1" />
                     <div>
                        <p className="text-sm text-neutral-500 mb-1">Call us</p>
-                       <p className="text-lg font-bold">+91 79048 98244</p>
+                       <p className="text-lg font-bold hover:text-[#ff914d] transition-colors">+91 79048 98244</p>
                     </div>
                  </div>
                  <div className="flex items-start gap-4">
-                    <MapPin className="w-6 h-6 text-[#FF5F38] mt-1" />
+                    <MapPin className="w-6 h-6 text-[#Ff3131] mt-1" />
                     <div>
                        <p className="text-sm text-neutral-500 mb-1">Global HQ</p>
                        <p className="text-lg font-bold">HQ - Cbe</p>
@@ -148,7 +144,7 @@ export default function ContactPage() {
                  </div>
              </div>
 
-             {/* 3. Socials */}
+             {/* 3. Socials - Hover Effect Updates */}
              <div className="flex gap-4 pt-4">
                  <SocialBtn icon={<Linkedin />} />
                  <SocialBtn icon={<Twitter />} />
@@ -166,8 +162,8 @@ export default function ContactPage() {
              className="lg:col-span-7"
            >
              <div className="bg-neutral-900 border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden">
-                 {/* Decorative Glow inside form - Orange */}
-                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF5F38]/5 rounded-full blur-[80px] pointer-events-none"></div>
+                 {/* Decorative Glow inside form - Using Start Color */}
+                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#Ff3131]/5 rounded-full blur-[80px] pointer-events-none"></div>
 
                  <h2 className="text-3xl font-bold mb-8">Send us a message</h2>
                  
@@ -186,11 +182,11 @@ export default function ContactPage() {
                                type="button"
                                key={item}
                                onClick={() => setFormState({...formState, service: item})}
-                               className={`px-4 py-3 rounded-xl text-sm border transition-all ${
+                               className={`px-4 py-3 rounded-xl text-sm border transition-all duration-300 ${
                                  formState.service === item 
-                                 // Active: Orange BG, White Text
-                                 ? "bg-[#FF5F38] border-[#FF5F38] text-white font-bold" 
-                                 : "bg-neutral-950 border-white/10 text-neutral-400 hover:border-white/30"
+                                 // Active State: Gradient Background
+                                 ? "bg-gradient-to-r from-[#Ff3131] to-[#ff914d] border-transparent text-white font-bold shadow-lg shadow-[#Ff3131]/20" 
+                                 : "bg-neutral-950 border-white/10 text-neutral-400 hover:border-[#ff914d]/50 hover:text-white"
                                }`}
                              >
                                 {item}
@@ -203,15 +199,15 @@ export default function ContactPage() {
                        <label className="text-sm font-medium text-neutral-400">Tell us about your project</label>
                        <textarea 
                           rows={5}
-                          className="w-full bg-neutral-950 border border-white/10 rounded-xl p-4 text-white placeholder:text-neutral-600 focus:outline-none focus:border-[#FF5F38] focus:ring-1 focus:ring-[#FF5F38] transition-all resize-none"
+                          className="w-full bg-neutral-950 border border-white/10 rounded-xl p-4 text-white placeholder:text-neutral-600 focus:outline-none focus:border-[#Ff3131] focus:ring-1 focus:ring-[#Ff3131] transition-all resize-none"
                           placeholder="What are you building? What is your timeline?"
                        ></textarea>
                     </div>
 
                     <button 
                        type="submit"
-                       // Hover: Orange BG, White Text
-                       className="w-full py-4 rounded-xl bg-white text-black font-bold text-lg hover:bg-[#FF5F38] hover:text-white transition-colors flex items-center justify-center gap-2 group"
+                       // Hover: Gradient Background
+                       className="w-full py-4 rounded-xl bg-white text-black font-bold text-lg hover:bg-gradient-to-r hover:from-[#Ff3131] hover:to-[#ff914d] hover:text-white transition-all duration-300 border border-transparent flex items-center justify-center gap-2 group"
                     >
                        Send Message <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
@@ -227,7 +223,6 @@ export default function ContactPage() {
       </div>
 
       {/* ======================= FOOTER ======================= */}
-      {/* Wrapped in high z-index to ensure it sits above background FX */}
       <div className="relative z-30">
         <Footer />
       </div>
@@ -244,14 +239,14 @@ const InputGroup = ({ label, placeholder, type }: { label: string, placeholder: 
       <input 
          type={type} 
          placeholder={placeholder}
-         // Focus: Orange Border & Ring
-         className="w-full bg-neutral-950 border border-white/10 rounded-xl p-4 text-white placeholder:text-neutral-600 focus:outline-none focus:border-[#FF5F38] focus:ring-1 focus:ring-[#FF5F38] transition-all"
+         // Focus: Start Color (#Ff3131)
+         className="w-full bg-neutral-950 border border-white/10 rounded-xl p-4 text-white placeholder:text-neutral-600 focus:outline-none focus:border-[#Ff3131] focus:ring-1 focus:ring-[#Ff3131] transition-all"
       />
    </div>
 );
 
 const SocialBtn = ({ icon }: { icon: React.ReactNode }) => (
-   <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:bg-white hover:text-black hover:scale-110 transition-all">
+   <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:bg-gradient-to-r hover:from-[#Ff3131] hover:to-[#ff914d] hover:border-transparent hover:text-white hover:scale-110 transition-all duration-300">
       {icon}
    </a>
 );

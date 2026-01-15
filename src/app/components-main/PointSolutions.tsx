@@ -40,8 +40,8 @@ const TypingRobot = () => {
 
   return (
     <div className="relative w-full h-[400px] flex items-center justify-center">
-      {/* Glow behind monitor - Orange */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#FF5F38]/10 blur-[60px] rounded-full"></div>
+      {/* Glow behind monitor - Start Color */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#Ff3131]/10 blur-[60px] rounded-full"></div>
 
       <svg
         viewBox="0 0 400 300"
@@ -81,8 +81,8 @@ const TypingRobot = () => {
                 {codeLines.map((line, i) => (
                   <g key={i} transform={`translate(115, ${100 + i * 15})`}>
                       <rect width={line.width1} height="4" rx="2" fill="#333" />
-                      {/* Code Highlight - Orange */}
-                      <rect x="50" width={line.width2} height="4" rx="2" fill={line.isHighlight ? "#FF5F38" : "#333"} />
+                      {/* Code Highlight - Start Color */}
+                      <rect x="50" width={line.width2} height="4" rx="2" fill={line.isHighlight ? "#Ff3131" : "#333"} />
                   </g>
                 ))}
              </motion.g>
@@ -104,14 +104,14 @@ const TypingRobot = () => {
               <rect x="150" y="120" width="100" height="60" rx="12" fill="#e5e5e5" />
               <rect x="155" y="125" width="90" height="50" rx="8" fill="#171717" />
               
-              {/* Eyes - Orange */}
+              {/* Eyes - Start Color */}
               <motion.g 
                  animate={{ scaleY: [1, 0.1, 1] }} 
                  transition={{ duration: 0.2, repeat: Infinity, repeatDelay: 3 }}
                  style={{ originY: "50%" }}
               >
-                 <circle cx="180" cy="150" r="6" fill="#FF5F38" className="shadow-[0_0_10px_#FF5F38]" />
-                 <circle cx="220" cy="150" r="6" fill="#FF5F38" className="shadow-[0_0_10px_#FF5F38]" />
+                 <circle cx="180" cy="150" r="6" fill="#Ff3131" className="shadow-[0_0_10px_#Ff3131]" />
+                 <circle cx="220" cy="150" r="6" fill="#Ff3131" className="shadow-[0_0_10px_#Ff3131]" />
               </motion.g>
 
               <line x1="200" y1="120" x2="200" y2="100" stroke="#737373" strokeWidth="2" />
@@ -139,7 +139,7 @@ const TypingRobot = () => {
              key={i}
              x={150 + i * 40}
              y={100}
-             fill="#FF5F38" // Orange Fill
+             fill="#Ff3131" // Start Color
              fontSize="10"
              fontFamily="monospace"
              opacity="0"
@@ -174,8 +174,8 @@ const AccordionItem = ({
         <span 
           className={cn(
             "text-xl font-medium transition-colors duration-300",
-            // Active Color: Orange
-            isOpen ? "text-[#FF5F38]" : "text-white group-hover:text-[#FF5F38]"
+            // Active Color: Start Color (#Ff3131)
+            isOpen ? "text-[#Ff3131]" : "text-white group-hover:text-[#Ff3131]"
           )}
         >
           {item.title}
@@ -185,8 +185,8 @@ const AccordionItem = ({
              animate={{ rotate: isOpen ? 45 : 0 }}
              transition={{ duration: 0.3 }}
            >
-             {/* Icon Color: Orange if open */}
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={isOpen ? "text-[#FF5F38]" : "text-neutral-500"}><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+             {/* Icon Color: Start Color if open */}
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={isOpen ? "text-[#Ff3131]" : "text-neutral-500"}><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
            </motion.div>
         </span>
       </button>
@@ -220,7 +220,7 @@ export default function PointSolutions() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Point <span className="bg-gradient-to-r from-[#FF5F38] to-[#FF9068] bg-clip-text text-transparent">Solutions</span>
+            Point <span className="bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">Solutions</span>
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl">
             Our specialized expertise covers the entire software lifecycle. Whether you need to launch fast or scale big, we have the module for you.
@@ -238,10 +238,12 @@ export default function PointSolutions() {
               />
             ))}
             <div className="mt-8">
-               {/* Button Text Orange */}
-               <button className="flex items-center gap-2 text-[#FF5F38] font-bold text-sm hover:gap-3 transition-all">
-                  EXPLORE ALL SERVICES 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+               {/* Button Text Gradient */}
+               <button className="flex items-center gap-2 font-bold text-sm hover:gap-3 transition-all">
+                 <span className="bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">
+                   EXPLORE ALL SERVICES
+                 </span>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#Ff3131" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                </button>
             </div>
           </div>
@@ -251,7 +253,7 @@ export default function PointSolutions() {
                 <TypingRobot />
                 <div className="text-center mt-6">
                    <p className="text-neutral-500 font-mono text-xs animate-pulse">
-                     &gt; AI_ENGINEER_BOT executing task: <span className="text-[#FF5F38]">{solutions[openIndex || 0].title}...</span>
+                     &gt; AI_ENGINEER_BOT executing task: <span className="text-[#Ff3131]">{solutions[openIndex || 0].title}...</span>
                    </p>
                 </div>
              </div>

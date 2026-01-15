@@ -51,7 +51,8 @@ export default function Testimonials() {
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Client{" "}
-            <span className="bg-gradient-to-r from-[#FF5F38] to-[#FF9068] bg-clip-text text-transparent">
+            {/* Gradient Text: Start Color -> End Color */}
+            <span className="bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">
               Success Stories
             </span>
           </h2>
@@ -71,7 +72,8 @@ export default function Testimonials() {
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="flex flex-col items-center text-center space-y-6 p-4 md:p-8"
             >
-              <Quote className="w-10 h-10 text-[#FF5F38]/50 rotate-180 mb-2" />
+              {/* Quote Icon using Start Color */}
+              <Quote className="w-10 h-10 text-[#Ff3131]/50 rotate-180 mb-2" />
               
               <p className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90 leading-relaxed max-w-3xl">
                 "{testimonialData[active].quote}"
@@ -81,7 +83,8 @@ export default function Testimonials() {
                 <h3 className="text-lg md:text-xl font-bold text-white">
                   {testimonialData[active].name}
                 </h3>
-                <p className="text-[#FF5F38] font-medium text-sm md:text-base">
+                {/* Designation using Gradient Text */}
+                <p className="font-medium text-sm md:text-base bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">
                   {testimonialData[active].designation}
                 </p>
               </div>
@@ -93,14 +96,16 @@ export default function Testimonials() {
             <button
               onClick={handlePrev}
               suppressHydrationWarning={true} 
-              className="p-2 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors"
+              // Hover uses gradient background
+              className="p-2 rounded-full bg-white/5 border border-white/10 text-white hover:bg-gradient-to-r hover:from-[#Ff3131] hover:to-[#ff914d] hover:border-transparent transition-all duration-300"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={handleNext}
               suppressHydrationWarning={true}
-              className="p-2 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors"
+              // Hover uses gradient background
+              className="p-2 rounded-full bg-white/5 border border-white/10 text-white hover:bg-gradient-to-r hover:from-[#Ff3131] hover:to-[#ff914d] hover:border-transparent transition-all duration-300"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
