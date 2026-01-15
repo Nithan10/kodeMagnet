@@ -169,6 +169,7 @@ const AccordionItem = ({
     <div className="border-b border-white/10 last:border-0">
       <button
         onClick={onClick}
+        suppressHydrationWarning={true}
         className="flex items-center justify-between w-full py-6 text-left focus:outline-none group"
       >
         <span 
@@ -239,7 +240,10 @@ export default function PointSolutions() {
             ))}
             <div className="mt-8">
                {/* Button Text Gradient */}
-               <button className="flex items-center gap-2 font-bold text-sm hover:gap-3 transition-all">
+               <button 
+                 suppressHydrationWarning={true}
+                 className="flex items-center gap-2 font-bold text-sm hover:gap-3 transition-all"
+               >
                  <span className="bg-gradient-to-r from-[#Ff3131] to-[#ff914d] bg-clip-text text-transparent">
                    EXPLORE ALL SERVICES
                  </span>
