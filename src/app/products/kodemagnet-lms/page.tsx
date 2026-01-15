@@ -20,7 +20,7 @@ import { NavbarDemo } from "../../components-main/Navbar";
 // Updated to Brand Orange
 const accentColor = "#ff4d00";
 
-export default function KodeMagnet LMSPage() {
+export default function KodeMagnetLMSPage() {
   return (
     // Updated selection color to Orange
     <main className="min-h-screen bg-neutral-950 text-white overflow-hidden selection:bg-[#ff4d00] selection:text-white">
