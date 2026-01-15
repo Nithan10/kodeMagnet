@@ -62,7 +62,7 @@ function Navbar({ className }: { className?: string }) {
               <div className="relative h-9 min-w-[80px]">
                 <Image
                   src="/img_31.png"
-                  alt="CodeMagnet"
+                  alt="KodeMagnet"
                   width={300}
                   height={150}
                   className="h-full w-auto object-contain"
@@ -126,7 +126,7 @@ function Navbar({ className }: { className?: string }) {
       <div className="lg:hidden fixed inset-x-0 top-4 z-50 mx-4">
         <div className="flex items-center justify-between bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-5 py-2.5">
           <Link href="/">
-            <Image src="/img_31.png" alt="CodeMagnet" width={140} height={60} />
+            <Image src="/img_31.png" alt="KodeMagnet" width={140} height={60} />
           </Link>
 
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>

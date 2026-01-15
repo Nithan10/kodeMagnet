@@ -129,7 +129,7 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-[#FF5F38] mt-1" />
                     <div>
                        <p className="text-sm text-neutral-500 mb-1">Email us</p>
-                       <a href="mailto:hello@codemagnet.com" className="text-lg font-bold hover:text-[#FF5F38] transition-colors">hello@codemagnet.com</a>
+                       <a href="mailto:hello@KodeMagnet.com" className="text-lg font-bold hover:text-[#FF5F38] transition-colors">hello@KodeMagnet.com</a>
                     </div>
                  </div>
                  <div className="flex items-start gap-4">

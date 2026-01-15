@@ -138,7 +138,7 @@ export default function KodeChatPage() {
                      </div>
                      <div className="p-3">
                         <p className="text-xs font-bold text-white">Summer Sale 2026</p>
-                        <p className="text-[10px] text-neutral-400 mb-2">codemagnet.com</p>
+                        <p className="text-[10px] text-neutral-400 mb-2">KodeMagnet.com</p>
                         <button className="w-full bg-white text-black text-xs font-bold py-2 rounded">Shop Now</button>
                      </div>
                   </motion.div>

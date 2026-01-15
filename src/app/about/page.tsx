@@ -170,7 +170,7 @@ export default function AboutPage() {
                </p>
                <div className="grid grid-cols-2 gap-6">
                   <div>
-                      <h4 className="text-2xl font-bold text-white">4</h4>
+                      <h4 className="text-2xl font-bold text-white">4+</h4>
                       <p className="text-sm text-neutral-500">Global Offices</p>
                   </div>
                   <div>
@@ -218,7 +218,7 @@ export default function AboutPage() {
       {/* ======================= TEAM SECTION ======================= */}
       <section className="py-24 px-6 bg-neutral-900/20">
          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Minds Behind The Code</h2>
+            <h2 className="text-4xl font-bold mb-4">Minds behind the code - Kode…</h2>
             <p className="text-neutral-400">A team of dreamers, architects, and problem solvers.</p>
          </div>
          <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">

@@ -116,8 +116,8 @@ export default function LetsTalk() {
              </Link>
 
              {/* Secondary Button */}
-             <Link href="mailto:hello@codemagnet.com" className="px-8 py-3 rounded-full border border-neutral-700 text-white font-medium hover:bg-neutral-800 transition-all hover:scale-105">
-                 hello@codemagnet.com
+             <Link href="mailto:hello@KodeMagnet.com" className="px-8 py-3 rounded-full border border-neutral-700 text-white font-medium hover:bg-neutral-800 transition-all hover:scale-105">
+                 hello@KodeMagnet.com
              </Link>
 
            </div>

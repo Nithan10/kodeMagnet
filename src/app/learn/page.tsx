@@ -120,7 +120,7 @@ export default function LearnPage() {
                      {/* Dot Border Updated */}
                      <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-neutral-800 border-4 border-[#FF5F38]"></div>
                      <h3 className="text-2xl font-bold text-white mb-2">Phase 1: Training</h3>
-                     <div className="inline-block px-3 py-1 rounded bg-white/10 text-xs font-bold mb-4">4 Months</div>
+                     <div className="inline-block px-3 py-1 rounded bg-white/10 text-xs font-bold mb-4">3 Months</div>
                      <p className="text-neutral-400 mb-4">Full-day, full-fledged training with experienced developers. No "Hello World" tutorials—just deep dives into architecture and logic.</p>
                      <ul className="space-y-2 text-sm text-neutral-300">
                         <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#FF5F38]"/> Industry Standard Curriculum</li>
@@ -132,16 +132,16 @@ export default function LearnPage() {
                   <div className="relative pl-8 border-l-2 border-dashed border-white/20">
                      <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-neutral-800 border-4 border-yellow-500"></div>
                      <h3 className="text-2xl font-bold text-white mb-2">Phase 2: Internship</h3>
-                     <div className="inline-block px-3 py-1 rounded bg-yellow-500/20 text-yellow-500 text-xs font-bold mb-4">6 Months</div>
-                     <p className="text-neutral-400 mb-4">You are inducted as an intern working on our own SaaS products (CodeLeads, Kodegraphy).</p>
+                     <div className="inline-block px-3 py-1 rounded bg-yellow-500/20 text-yellow-500 text-xs font-bold mb-4">3 Months</div>
+                     <p className="text-neutral-400 mb-4">You are inducted as an intern working on our own SaaS products (Kodegraphy).</p>
                      <div className="bg-neutral-800 p-4 rounded-xl border border-white/5 mb-4">
                         <div className="flex justify-between items-center mb-1">
                            <span className="text-sm text-neutral-400">Monthly Stipend</span>
-                           <span className="font-bold text-green-400">₹12,000</span>
+                           <span className="font-bold text-green-400">₹7,000</span>
                         </div>
                         <div className="flex justify-between items-center border-t border-white/10 pt-1 mt-1">
                            <span className="text-sm text-neutral-400">Total Value</span>
-                           <span className="font-bold text-white">₹72,000</span>
+                           <span className="font-bold text-white">₹22,500</span>
                         </div>
                      </div>
                   </div>

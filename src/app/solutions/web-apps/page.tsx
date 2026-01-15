@@ -161,9 +161,9 @@ const AppShowcaseTabs = () => {
                <div className="w-3 h-3 rounded-full bg-green-500/80" />
             </div>
             <div className="mx-auto w-1/2 h-6 bg-neutral-800 rounded flex items-center justify-center text-[10px] text-neutral-500 font-mono">
-               {activeTab === "content" && "media.codemagnet.com/explore"}
-               {activeTab === "dashboard" && "analytics.codemagnet.com/overview"}
-               {activeTab === "kanban" && "tasks.codemagnet.com/board"}
+               {activeTab === "content" && "media.KodeMagnet.com/explore"}
+               {activeTab === "dashboard" && "analytics.KodeMagnet.com/overview"}
+               {activeTab === "kanban" && "tasks.KodeMagnet.com/board"}
             </div>
          </div>
 

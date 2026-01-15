@@ -20,7 +20,7 @@ import { NavbarDemo } from "../../components-main/Navbar";
 // Updated to Brand Orange
 const accentColor = "#ff4d00";
 
-export default function CodeMagnetLMSPage() {
+export default function KodeMagnet LMSPage() {
   return (
     // Updated selection color to Orange
     <main className="min-h-screen bg-neutral-950 text-white overflow-hidden selection:bg-[#ff4d00] selection:text-white">
@@ -146,7 +146,7 @@ export default function CodeMagnetLMSPage() {
             <div className="text-center mb-16">
                <h2 className="text-3xl lg:text-5xl font-bold mb-6">Built for Code, Not Just Content</h2>
                <p className="text-neutral-400 max-w-2xl mx-auto">
-                 Traditional LMS platforms fail when it comes to programming. We built CodeMagnet to handle syntax, compilers, and containers natively.
+                 Traditional LMS platforms fail when it comes to programming. We built KodeMagnet to handle syntax, compilers, and containers natively.
                </p>
             </div>
 
@@ -217,7 +217,7 @@ export default function CodeMagnetLMSPage() {
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#ff4d00]/10 blur-[100px] -z-10 rounded-full"></div>
          
          <h2 className="text-4xl font-bold mb-6">Ready to upgrade your curriculum?</h2>
-         <p className="text-neutral-400 mb-8">Join top universities and coding bootcamps using CodeMagnet.</p>
+         <p className="text-neutral-400 mb-8">Join top universities and coding bootcamps using KodeMagnet.</p>
          
          <div className="flex items-center justify-center gap-4">
             <Link href="/contact" className="px-8 py-3 rounded-full font-bold text-white shadow-[0_0_20px_rgba(255,77,0,0.3)]" style={{ backgroundColor: accentColor }}>
