@@ -136,14 +136,14 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6 text-[#FF5F38] mt-1" />
                     <div>
                        <p className="text-sm text-neutral-500 mb-1">Call us</p>
-                       <p className="text-lg font-bold">+91 98765 43210</p>
+                       <p className="text-lg font-bold">+91 79048 98244</p>
                     </div>
                  </div>
                  <div className="flex items-start gap-4">
                     <MapPin className="w-6 h-6 text-[#FF5F38] mt-1" />
                     <div>
                        <p className="text-sm text-neutral-500 mb-1">Global HQ</p>
-                       <p className="text-lg font-bold">123 Tech Park, Cyber City<br />Bangalore, India</p>
+                       <p className="text-lg font-bold">HQ - Cbe</p>
                     </div>
                  </div>
              </div>

@@ -142,7 +142,7 @@ const HolographicIDE = () => {
               <span className="text-[#FF5F38]">import</span>
               <span className="text-white">{`{`} Cloud {`}`}</span>
               <span className="text-[#FF5F38]">from</span>
-              <span className="text-orange-300 break-all">'@codemagnet/core'</span>;
+              <span className="text-orange-300 break-all">'@KodeMagnet/core'</span>;
             </div>
             <div className="h-2 sm:h-4"></div>
             <div className="pl-0 text-neutral-400">// Initializing Cluster...</div>
@@ -218,7 +218,8 @@ export default function Hero() {
       <Spotlight className="top-20 left-10 md:left-full h-[50vh] md:h-[80vh] w-[90vw] md:w-[50vw]" fill="#FF5F38" />
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-16 md:pt-44 md:pb-20 min-h-screen flex flex-col lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10">
+      {/* Changed pt-20 to pt-36 to clear navbar on mobile */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-36 pb-16 md:pt-44 md:pb-20 min-h-screen flex flex-col lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10">
         
         {/* Left Column: Text Content */}
         {/* Order 1 on mobile (first), Order 1 on Desktop (left) */}

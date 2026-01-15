@@ -17,6 +17,8 @@ import {
   Users,
   Camera,
   ChevronDown,
+  Menu as MenuIcon, // Standard Hamburger Icon
+  X as CloseIcon,   // Standard Close Icon
 } from "lucide-react";
 
 export function NavbarDemo() {
@@ -56,7 +58,6 @@ function Navbar({ className }: { className?: string }) {
       >
         <Menu setActive={setActive}>
           <div className="flex items-center gap-5">
-
             {/* LOGO */}
             <Link href="/" className="mr-2">
               <div className="relative h-9 min-w-[80px]">
@@ -71,27 +72,69 @@ function Navbar({ className }: { className?: string }) {
               </div>
             </Link>
 
-            <Link href="/" className={getLinkClass("/")}>Home</Link>
+            <Link href="/" className={getLinkClass("/")}>
+              Home
+            </Link>
 
             {/* WHAT WE DO */}
-            <div className={isSectionActive("/solutions") ? "text-[#FF5F38]" : ""}>
+            <div
+              className={isSectionActive("/solutions") ? "text-[#FF5F38]" : ""}
+            >
               <MenuItem item="What We Do" active={active} setActive={setActive}>
                 <div className="grid grid-cols-2 gap-4 p-4 w-[400px] bg-black/80 backdrop-blur-xl rounded-xl border border-white/10">
-                  <HoveredLink href="/solutions/software"><Item icon={<Code2 className="text-blue-500"/>}>Software Solutions</Item></HoveredLink>
-                  <HoveredLink href="/solutions/point"><Item icon={<Target className="text-red-500"/>}>Point Solutions</Item></HoveredLink>
-                  <HoveredLink href="/solutions/websites"><Item icon={<Layout className="text-green-500"/>}>Websites</Item></HoveredLink>
-                  <HoveredLink href="/solutions/mobile-apps"><Item icon={<Smartphone className="text-purple-500"/>}>Mobile Apps</Item></HoveredLink>
-                  <HoveredLink href="/solutions/web-apps"><Item icon={<Globe className="text-orange-500"/>}>Web Apps</Item></HoveredLink>
-                  <HoveredLink href="/solutions/chatbot"><Item icon={<MessageSquare className="text-pink-500"/>}>Chatbot</Item></HoveredLink>
-                  <HoveredLink href="/solutions/ai"><Item icon={<Bot className="text-cyan-500"/>}>AI Solutions</Item></HoveredLink>
-                  <HoveredLink href="/solutions/hire-train-deploy"><Item icon={<Users className="text-yellow-500"/>}>Hire, Train & Deploy</Item></HoveredLink>
+                  <HoveredLink href="/solutions/software">
+                    <Item icon={<Code2 className="text-blue-500" />}>
+                      Software Solutions
+                    </Item>
+                  </HoveredLink>
+                  <HoveredLink href="/solutions/point">
+                    <Item icon={<Target className="text-red-500" />}>
+                      Point Solutions
+                    </Item>
+                  </HoveredLink>
+                  <HoveredLink href="/solutions/websites">
+                    <Item icon={<Layout className="text-green-500" />}>
+                      Websites
+                    </Item>
+                  </HoveredLink>
+                  <HoveredLink href="/solutions/mobile-apps">
+                    <Item icon={<Smartphone className="text-purple-500" />}>
+                      Mobile Apps
+                    </Item>
+                  </HoveredLink>
+                  <HoveredLink href="/solutions/web-apps">
+                    <Item icon={<Globe className="text-orange-500" />}>
+                      Web Apps
+                    </Item>
+                  </HoveredLink>
+                  <HoveredLink href="/solutions/chatbot">
+                    <Item icon={<MessageSquare className="text-pink-500" />}>
+                      Chatbot
+                    </Item>
+                  </HoveredLink>
+                  <HoveredLink href="/solutions/ai">
+                    <Item icon={<Bot className="text-cyan-500" />}>
+                      AI Solutions
+                    </Item>
+                  </HoveredLink>
+                  <HoveredLink href="/solutions/hire-train-deploy">
+                    <Item icon={<Users className="text-yellow-500" />}>
+                      Hire, Train & Deploy
+                    </Item>
+                  </HoveredLink>
                 </div>
               </MenuItem>
             </div>
 
             {/* OUR PRODUCTS — ONLY KODEGRAPHY */}
-            <div className={isSectionActive("/products") ? "text-[#FF5F38]" : ""}>
-              <MenuItem item="Our Products" active={active} setActive={setActive}>
+            <div
+              className={isSectionActive("/products") ? "text-[#FF5F38]" : ""}
+            >
+              <MenuItem
+                item="Our Products"
+                active={active}
+                setActive={setActive}
+              >
                 <div className="p-3 w-[260px] bg-black/80 backdrop-blur-xl rounded-xl border border-white/10">
                   <ProductCard
                     title="Kodegraphy"
@@ -103,8 +146,12 @@ function Navbar({ className }: { className?: string }) {
               </MenuItem>
             </div>
 
-            <Link href="/about" className={getLinkClass("/about")}>About Us</Link>
-            <Link href="/contact" className={getLinkClass("/contact")}>Contact Us</Link>
+            <Link href="/about" className={getLinkClass("/about")}>
+              About Us
+            </Link>
+            <Link href="/contact" className={getLinkClass("/contact")}>
+              Contact Us
+            </Link>
 
             <Link
               href="/learn"
@@ -117,51 +164,87 @@ function Navbar({ className }: { className?: string }) {
             >
               Learn From Us
             </Link>
-
           </div>
         </Menu>
       </div>
 
       {/* ================= MOBILE NAVBAR ================= */}
       <div className="lg:hidden fixed inset-x-0 top-4 z-50 mx-4">
-        <div className="flex items-center justify-between bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-5 py-2.5">
+        <div className="flex items-center justify-between bg-black/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 shadow-lg">
           <Link href="/">
-            <Image src="/img_31.png" alt="KodeMagnet" width={140} height={60} />
+            <Image src="/img_31.png" alt="KodeMagnet" width={120} height={50} />
           </Link>
 
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-white p-1"
+          >
+            {mobileMenuOpen ? (
+              <CloseIcon className="w-6 h-6" />
+            ) : (
+              <MenuIcon className="w-6 h-6" />
+            )}
           </button>
         </div>
 
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="mt-3 bg-black/80 backdrop-blur-2xl rounded-2xl p-5 border border-white/10"
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="mt-3 bg-neutral-900/95 backdrop-blur-2xl rounded-2xl p-5 border border-white/10 shadow-2xl overflow-hidden max-h-[80vh] overflow-y-auto"
             >
-              <MobileLink href="/" onClick={() => setMobileMenuOpen(false)}>Home</MobileLink>
-
-              <MobileAccordion title="Our Products">
-                <MobileLink
-                  href="/products/kodegraphy"
-                  icon={<Camera className="text-fuchsia-500" />}
-                >
-                  Kodegraphy
+              <div className="flex flex-col space-y-2">
+                <MobileLink href="/" onClick={() => setMobileMenuOpen(false)}>
+                  Home
                 </MobileLink>
-              </MobileAccordion>
 
-              <MobileLink href="/about">About Us</MobileLink>
-              <MobileLink href="/contact">Contact Us</MobileLink>
+                {/* --- ADDED: WHAT WE DO SECTION --- */}
+                <MobileAccordion title="What We Do">
+                  <MobileLink href="/solutions/software" onClick={() => setMobileMenuOpen(false)} icon={<Code2 className="text-blue-500 w-5 h-5" />}>Software Solutions</MobileLink>
+                  <MobileLink href="/solutions/point" onClick={() => setMobileMenuOpen(false)} icon={<Target className="text-red-500 w-5 h-5" />}>Point Solutions</MobileLink>
+                  <MobileLink href="/solutions/websites" onClick={() => setMobileMenuOpen(false)} icon={<Layout className="text-green-500 w-5 h-5" />}>Websites</MobileLink>
+                  <MobileLink href="/solutions/mobile-apps" onClick={() => setMobileMenuOpen(false)} icon={<Smartphone className="text-purple-500 w-5 h-5" />}>Mobile Apps</MobileLink>
+                  <MobileLink href="/solutions/web-apps" onClick={() => setMobileMenuOpen(false)} icon={<Globe className="text-orange-500 w-5 h-5" />}>Web Apps</MobileLink>
+                  <MobileLink href="/solutions/chatbot" onClick={() => setMobileMenuOpen(false)} icon={<MessageSquare className="text-pink-500 w-5 h-5" />}>Chatbot</MobileLink>
+                  <MobileLink href="/solutions/ai" onClick={() => setMobileMenuOpen(false)} icon={<Bot className="text-cyan-500 w-5 h-5" />}>AI Solutions</MobileLink>
+                  <MobileLink href="/solutions/hire-train-deploy" onClick={() => setMobileMenuOpen(false)} icon={<Users className="text-yellow-500 w-5 h-5" />}>Hire, Train & Deploy</MobileLink>
+                </MobileAccordion>
+                {/* -------------------------------- */}
 
-              <Link
-                href="/learn"
-                className="block mt-3 text-center bg-[#FF5F38] rounded-xl py-2 font-bold"
-              >
-                Learn From Us
-              </Link>
+                <MobileAccordion title="Our Products">
+                  <MobileLink
+                    href="/products/kodegraphy"
+                    onClick={() => setMobileMenuOpen(false)}
+                    icon={<Camera className="w-5 h-5 text-fuchsia-500" />}
+                  >
+                    Kodegraphy
+                  </MobileLink>
+                </MobileAccordion>
+
+                <MobileLink
+                  href="/about"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About Us
+                </MobileLink>
+                <MobileLink
+                  href="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact Us
+                </MobileLink>
+
+                <Link
+                  href="/learn"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block mt-4 text-center bg-[#FF5F38] hover:bg-[#E04F2E] text-white rounded-xl py-3 font-bold transition-colors"
+                >
+                  Learn From Us
+                </Link>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -175,15 +258,17 @@ function Navbar({ className }: { className?: string }) {
 const Item = ({ children, icon }: any) => (
   <div className="flex items-center gap-3 group">
     {icon}
-    <span className="text-sm">{children}</span>
+    <span className="text-sm text-neutral-200 group-hover:text-white">
+      {children}
+    </span>
   </div>
 );
 
 const ProductCard = ({ title, desc, href, icon }: any) => (
-  <Link href={href} className="flex gap-3 p-3 rounded-xl hover:bg-white/5">
+  <Link href={href} className="flex gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors">
     {icon}
     <div>
-      <h4 className="text-white font-semibold">{title}</h4>
+      <h4 className="text-white font-semibold text-sm">{title}</h4>
       <p className="text-xs text-neutral-400">{desc}</p>
     </div>
   </Link>
@@ -192,24 +277,52 @@ const ProductCard = ({ title, desc, href, icon }: any) => (
 const MobileAccordion = ({ title, children }: any) => {
   const [open, setOpen] = useState(false);
   return (
-    <div>
-      <button onClick={() => setOpen(!open)} className="flex justify-between w-full py-2">
+    <div className="border-b border-white/5 last:border-0">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center justify-between w-full py-4 text-white font-medium text-lg"
+      >
         {title}
-        <ChevronDown className={cn("transition", open && "rotate-180")} />
+        <ChevronDown
+          className={cn(
+            "w-5 h-5 text-neutral-400 transition-transform duration-300",
+            open && "rotate-180"
+          )}
+        />
       </button>
-      {open && <div className="pl-2">{children}</div>}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <div className="pl-2 pb-4 flex flex-col gap-2">{children}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
-const MobileLink = ({ href, children, icon, onClick }: any) => (
-  <Link href={href} onClick={onClick} className="flex items-center gap-3 py-2">
-    {icon}
-    {children}
-  </Link>
-);
+const MobileLink = ({ href, children, icon, onClick }: any) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
 
-const MenuIcon = () => (<span className="text-white">☰</span>);
-const CloseIcon = () => (<span className="text-white">✕</span>);
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={cn(
+        "flex items-center gap-3 py-3 border-b border-white/5 last:border-0 transition-colors",
+        isActive ? "text-[#FF5F38]" : "text-white/80 hover:text-white"
+      )}
+    >
+      {icon}
+      <span className="text-base font-medium">{children}</span>
+    </Link>
+  );
+};
 
 export default NavbarDemo;
