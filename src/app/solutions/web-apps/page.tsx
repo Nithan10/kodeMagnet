@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavbarDemo } from "@/app/components-main/Navbar";
+// 1. Import Footer
+import Footer from "@/app/components-main/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { 
@@ -96,6 +98,12 @@ export default function WebAppsPage() {
             </Link>
          </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
+
     </main>
   );
 }
@@ -187,27 +195,27 @@ const AppShowcaseTabs = () => {
                             className="absolute inset-0"
                           >
                              <Image 
-                                 src={carouselImages[currentImageIndex]}
-                                 alt="Content Carousel"
-                                 fill
-                                 className="object-cover opacity-80"
-                                 priority={true}
+                                  src={carouselImages[currentImageIndex]}
+                                  alt="Content Carousel"
+                                  fill
+                                  className="object-cover opacity-80"
+                                  priority={true}
                              />
                           </motion.div>
                         </AnimatePresence>
 
-                         {/* Carousel Indicators (Dots) */}
-                         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-                            {carouselImages.map((_, index) => (
-                              <div 
-                                key={index}
-                                className={cn(
-                                  "w-2 h-2 rounded-full transition-all duration-300",
-                                  index === currentImageIndex ? "bg-[#FF5F38] w-4" : "bg-white/30"
-                                )}
-                              />
-                            ))}
-                         </div>
+                          {/* Carousel Indicators (Dots) */}
+                          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                             {carouselImages.map((_, index) => (
+                               <div 
+                                 key={index}
+                                 className={cn(
+                                   "w-2 h-2 rounded-full transition-all duration-300",
+                                   index === currentImageIndex ? "bg-[#FF5F38] w-4" : "bg-white/30"
+                                 )}
+                               />
+                             ))}
+                          </div>
                         
                         {/* Fake UI Overlay for aesthetic */}
                         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none"></div>

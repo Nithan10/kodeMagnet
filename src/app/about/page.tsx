@@ -4,10 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
 import { 
-  Code2, Cpu, Globe, Users, Zap, Rocket, Target, Award, ArrowRight, CheckCircle2, 
-  MapPin, Clock, Database, Smartphone, Cloud, Terminal, Shield
+  Code2, Cpu, Globe, Users, Zap, Rocket, Award, ArrowRight,
+  MapPin, Database, Smartphone, Cloud, Terminal, Shield
 } from "lucide-react";
+
+// --- IMPORTS ---
 import { NavbarDemo } from "../components-main/Navbar";
+import Footer from "../components-main/Footer"; 
 
 export default function AboutPage() {
   const containerRef = useRef(null);
@@ -17,7 +20,6 @@ export default function AboutPage() {
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]); 
 
   return (
-    // Updated selection color to Orange
     <main ref={containerRef} className="min-h-screen bg-neutral-950 text-white selection:bg-[#ff4d00] selection:text-white font-sans">
       
       <div className="relative z-50">
@@ -45,7 +47,6 @@ export default function AboutPage() {
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[1.1]">
             We don't just write code. <br />
-            {/* Updated Gradient: White -> Orange -> White */}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#ff4d00] to-white bg-[length:200%_auto] animate-shimmer">
               We engineer futures.
             </span>
@@ -59,7 +60,7 @@ export default function AboutPage() {
             <div>
                <h2 className="text-3xl md:text-5xl font-bold mb-6">Building the digital backbone of tomorrow.</h2>
                <p className="text-neutral-400 text-lg leading-relaxed mb-6">
-                 CodeMagnet started as a small dev shop and evolved into a multi-faceted ecosystem. We bridge the gap between <strong>Education</strong> (training the next gen) and <strong>Enterprise</strong> (building complex systems).
+                 KodeMagnet started as a small dev shop and evolved into a multi-faceted ecosystem. We bridge the gap between <strong>Education</strong> (training the next gen) and <strong>Enterprise</strong> (building complex systems).
                </p>
                <div className="flex gap-4">
                   <Badge text="ISO Certified" />
@@ -85,8 +86,6 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-neutral-400">Powered by modern architecture</h2>
          </div>
          
-         
-
          <div className="flex relative w-full overflow-hidden mask-gradient">
              <div className="flex animate-marquee gap-12 min-w-full">
                 <TechIcon icon={<Code2 />} label="Next.js" />
@@ -116,7 +115,7 @@ export default function AboutPage() {
                <TimelineItem 
                  year="2023" 
                  title="The Inception" 
-                 desc="CodeMagnet is founded with a single mission: To provide high-quality software solutions while simultaneously training the talent needed to build them."
+                 desc="KodeMagnet is founded with a single mission: To provide high-quality software solutions while simultaneously training the talent needed to build them."
                />
                <TimelineItem 
                  year="2024" 
@@ -143,8 +142,6 @@ export default function AboutPage() {
          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             
-            
-            
             <div className="order-2 lg:order-1 relative h-[400px] w-full bg-neutral-950 rounded-3xl border border-white/10 p-4 flex items-center justify-center overflow-hidden">
                {/* Abstract Map Visualization */}
                <div className="absolute inset-0 opacity-40">
@@ -155,7 +152,7 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                </div>
-               {/* Pulsing Dots - Updated Colors */}
+               {/* Pulsing Dots */}
                <div className="relative z-10 w-full h-full">
                   <MapPin className="absolute top-[30%] left-[25%] text-[#ff4d00] w-6 h-6 animate-bounce" />
                   <MapPin className="absolute top-[40%] right-[30%] text-[#ff4d00] w-6 h-6 animate-bounce delay-75" />
@@ -173,12 +170,12 @@ export default function AboutPage() {
                </p>
                <div className="grid grid-cols-2 gap-6">
                   <div>
-                     <h4 className="text-2xl font-bold text-white">4</h4>
-                     <p className="text-sm text-neutral-500">Global Offices</p>
+                      <h4 className="text-2xl font-bold text-white">4</h4>
+                      <p className="text-sm text-neutral-500">Global Offices</p>
                   </div>
                   <div>
-                     <h4 className="text-2xl font-bold text-white">12+</h4>
-                     <p className="text-sm text-neutral-500">Countries Served</p>
+                      <h4 className="text-2xl font-bold text-white">12+</h4>
+                      <p className="text-sm text-neutral-500">Countries Served</p>
                   </div>
                </div>
             </div>
@@ -190,7 +187,6 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-16">Our DNA</h2>
           <div className="grid md:grid-cols-3 gap-6 auto-rows-[300px]">
-            {/* Updated Hover Borders to Orange */}
             <div className="md:col-span-2 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#ff4d00]/50 transition-colors">
               <Rocket className="absolute top-0 right-0 w-48 h-48 text-white opacity-5 group-hover:opacity-10 transition-opacity rotate-12" />
               <div className="relative z-10 flex flex-col justify-end h-full">
@@ -212,7 +208,7 @@ export default function AboutPage() {
               <Award className="absolute top-0 right-0 w-48 h-48 text-white opacity-5 group-hover:opacity-10 transition-opacity -rotate-12" />
               <div className="relative z-10 flex flex-col justify-end h-full">
                 <h3 className="text-3xl font-bold mb-2 text-white">Education at the Core</h3>
-                <p className="text-neutral-400">Through CodeMagnet LMS and our Hire-Train-Deploy model, we are fixing the skills gap in the tech industry.</p>
+                <p className="text-neutral-400">Through KodeMagnet LMS and our Hire-Train-Deploy model, we are fixing the skills gap in the tech industry.</p>
               </div>
             </div>
           </div>
@@ -233,15 +229,21 @@ export default function AboutPage() {
          </div>
       </section>
 
-      {/* ======================= FOOTER ======================= */}
+      {/* ======================= CTA / PRE-FOOTER ======================= */}
+      {/* This section has z-20. To make the Footer robot visible on top of this, Footer needs > z-20 */}
       <section className="py-40 px-6 text-center z-20 bg-neutral-950 relative overflow-hidden">
-        {/* Updated Footer Glow */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#ff4d00]/10 to-transparent"></div>
         <h2 className="text-5xl font-bold mb-8 relative z-10">Let's build the impossible.</h2>
         <Link href="/contact" className="relative z-10 inline-flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-[#ff4d00] hover:text-white transition-all">
            Start Project <ArrowRight className="w-4 h-4"/>
         </Link>
       </section>
+
+      {/* ======================= FOOTER COMPONENT ======================= */}
+      {/* FIX: Wrapped Footer in z-30 to sit ABOVE the CTA section so the robot can peek over */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
 
     </main>
   );
@@ -257,19 +259,19 @@ const StickyScrollSection = () => {
       title: "Software Solutions",
       description: "We build robust, scalable web and mobile applications. From sleek marketing websites to complex dashboards and AI-powered tools.",
       image: "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?q=80&w=1470&auto=format&fit=crop",
-      color: "#ff4d00" // Updated to Brand Orange
+      color: "#ff4d00" 
     },
     {
       title: "Our Product Suite",
       description: "CodeLeads (CRM), Kodegraphy (Event Tech), and KodeChat (Automation) are live examples of our engineering prowess.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop",
-      color: "#ff4d00" // Updated to Brand Orange
+      color: "#ff4d00" 
     },
     {
       title: "Hire, Train, Deploy",
-      description: "The CodeMagnet Academy is a pipeline. We identify raw talent, train them on our LMS, and deploy them to top companies.",
+      description: "The KodeMagnet Academy is a pipeline. We identify raw talent, train them on our LMS, and deploy them to top companies.",
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop",
-      color: "#ff2600" // Updated to Red for variation
+      color: "#ff2600" 
     },
   ];
 
@@ -277,7 +279,7 @@ const StickyScrollSection = () => {
     <div className="bg-neutral-950 relative z-20 py-32">
        <div className="max-w-7xl mx-auto px-6">
          <div className="mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">The CodeMagnet Ecosystem</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">The CodeMag Ecosystem</h2>
             <p className="text-neutral-400">Scroll down to explore.</p>
          </div>
 
@@ -348,12 +350,6 @@ const StickyItem = ({ item, index, setActiveIndex }: { item: any, index: number,
     <div ref={ref} className="min-h-[80vh] flex flex-col justify-center border-l-2 border-white/10 pl-10 transition-colors duration-500" style={{ borderColor: isInView ? item.color : 'rgba(255,255,255,0.1)' }}>
       <h3 className="text-4xl font-bold mb-6 transition-colors duration-300" style={{ color: isInView ? item.color : 'white' }}>{item.title}</h3>
       <p className="text-xl text-neutral-400 leading-relaxed max-w-lg">{item.description}</p>
-      {/* Insert Diagram Placeholder if relevant */}
-      {index === 2 && (
-          <div className="mt-6">
-              
-          </div>
-      )}
     </div>
   );
 };
@@ -365,7 +361,6 @@ const TimelineItem = ({ year, title, desc }: { year: string, title: string, desc
       viewport={{ once: true }}
       className="relative pl-8 md:pl-12"
    >
-      {/* Updated Dot Color */}
       <div className="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#ff4d00] shadow-[0_0_10px_#ff4d00]"></div>
       <span className="text-sm font-bold text-[#ff4d00] mb-1 block tracking-wider">{year}</span>
       <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
@@ -388,7 +383,6 @@ const StatCard = ({ number, label }: { number: string, label: string }) => (
 
 const TechIcon = ({ icon, label }: { icon: React.ReactNode, label: string }) => (
    <div className="flex items-center gap-3 px-6 py-3 bg-neutral-900 border border-white/10 rounded-full min-w-fit">
-      {/* Updated Icon Color */}
       <span className="text-[#ff4d00]">{icon}</span>
       <span className="font-medium text-sm">{label}</span>
    </div>
@@ -405,7 +399,6 @@ const TeamMember = ({ name, role }: { name: string, role: string }) => (
          />
       </div>
       <h3 className="text-lg font-bold text-white">{name}</h3>
-      {/* Updated Role Color */}
       <p className="text-sm text-[#ff4d00]">{role}</p>
    </div>
 );

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavbarDemo } from "@/app/components-main/Navbar";
+import Footer from "@/app/components-main/Footer"; // Imported Footer
 import Link from "next/link";
 import { 
   IconMessageChatbot, 
@@ -18,7 +19,7 @@ export default function ChatbotSolutionsPage() {
     // Updated selection color to Orange
     <main className="min-h-screen bg-black text-white selection:bg-[#ff4d00] selection:text-white overflow-hidden">
       {/* Navbar */}
-      <div className="relative w-full flex items-center justify-center">
+      <div className="relative w-full flex items-center justify-center z-50">
          <NavbarDemo />
       </div>
 
@@ -169,6 +170,11 @@ export default function ChatbotSolutionsPage() {
             </div>
          </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
 
     </main>
   );

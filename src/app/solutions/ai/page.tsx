@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { NavbarDemo } from "@/app/components-main/Navbar";
+// 1. Import Footer
+import Footer from "@/app/components-main/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -190,6 +192,11 @@ export default function AISolutionsPage() {
 
          </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
 
     </main>
   );

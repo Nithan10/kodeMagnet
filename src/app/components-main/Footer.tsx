@@ -91,7 +91,7 @@ export default function Footer() {
                 {/* 2. REPLACED TEXT WITH IMAGE */}
                 <Image
                   src="/img_31.png" // Points to public/img_31.png
-                  alt="CodeMagnet Logo"
+                  alt="KodeMagnet Logo"
                   width={150}
                   height={60}
                   className="object-contain" // Keeps aspect ratio correct
@@ -153,7 +153,7 @@ export default function Footer() {
 
         {/* --- BOTTOM BAR --- */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-neutral-500">
-            <p>© {currentYear} CodeMagnet Inc. All rights reserved.</p>
+            <p>© {currentYear} KodeMagnet Inc. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
                 <Link href="/privacy" className="hover:text-[#FF5F38] transition-colors">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-[#FF5F38] transition-colors">Terms of Service</Link>

@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export const FooterRobot = () => {
-  // Updated to the CodeMagnet Orange Theme
+  // Updated to the KodeMagnet Orange Theme
   const accentColor = "#FF5F38"; 
 
   return (

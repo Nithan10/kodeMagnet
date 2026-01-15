@@ -11,8 +11,10 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
-// --- FIX: Updated import to match the folder shown in your screenshot ---
+// --- IMPORTS ---
 import { NavbarDemo } from "@/app/components-main/Navbar"; 
+// 1. Import Footer (Adjust path if necessary based on your folder structure)
+import Footer from "@/app/components-main/Footer"; 
 
 export default function SoftwareSolutionsPage() {
   return (
@@ -140,6 +142,12 @@ export default function SoftwareSolutionsPage() {
           </div>
         </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      {/* Wrapped in high z-index to sit above the skewed background of CTA */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
 
     </main>
   );

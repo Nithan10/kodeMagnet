@@ -16,6 +16,8 @@ import {
   Instagram
 } from "lucide-react";
 import { NavbarDemo } from "../components-main/Navbar";
+// 1. Import Footer
+import Footer from "../components-main/Footer";
 
 // Updated Accent Color Variable
 const accentColor = "#FF5F38";
@@ -36,7 +38,8 @@ export default function ContactPage() {
 
   return (
     // Updated Selection Color to Orange
-    <main className="min-h-screen bg-neutral-950 text-white selection:bg-[#FF5F38] selection:text-white font-sans overflow-hidden">
+    // Removed 'overflow-hidden' to allow scrolling to the Footer
+    <main className="min-h-screen bg-neutral-950 text-white selection:bg-[#FF5F38] selection:text-white font-sans relative">
       
       <div className="relative z-50">
         <NavbarDemo />
@@ -222,6 +225,13 @@ export default function ContactPage() {
 
         </div>
       </div>
+
+      {/* ======================= FOOTER ======================= */}
+      {/* Wrapped in high z-index to ensure it sits above background FX */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
+
     </main>
   );
 }

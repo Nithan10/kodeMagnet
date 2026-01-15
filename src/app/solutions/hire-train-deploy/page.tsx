@@ -1,7 +1,8 @@
 "use client";
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { NavbarDemo } from "@/app/components-main/Navbar";
+import Footer from "@/app/components-main/Footer"; // Imported Footer
 import Link from "next/link";
 import { 
   IconSearch, 
@@ -19,7 +20,7 @@ export default function HireTrainDeployPage() {
     // Updated selection color to Orange
     <main className="min-h-screen bg-black text-white selection:bg-[#ff4d00] selection:text-white overflow-hidden">
       {/* Navbar */}
-      <div className="relative w-full flex items-center justify-center">
+      <div className="relative w-full flex items-center justify-center z-50">
          <NavbarDemo />
       </div>
 
@@ -48,7 +49,7 @@ export default function HireTrainDeployPage() {
             <span className="text-white">Tech </span>
             {/* Updated Underline Color */}
             <span className="text-[#ff4d00] underline decoration-wavy decoration-[#ff4d00]/30 underline-offset-8">
-              Deployment.
+               Deployment.
             </span>
           </motion.h1>
           
@@ -82,8 +83,6 @@ export default function HireTrainDeployPage() {
                <p className="text-neutral-400">How we transform raw potential into your ideal employee.</p>
             </div>
             
-            
-
             <div className="relative">
                {/* Central Line - Updated Gradient */}
                <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#ff4d00] via-neutral-800 to-neutral-900 md:-translate-x-1/2 rounded-full" />
@@ -196,6 +195,11 @@ export default function HireTrainDeployPage() {
             </div>
          </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
 
     </main>
   );

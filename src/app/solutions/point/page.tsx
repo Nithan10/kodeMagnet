@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IconPlus, IconMinus, IconArrowRight } from "@tabler/icons-react";
 import { NavbarDemo } from "@/app/components-main/Navbar";
+// 1. Import Footer
+import Footer from "@/app/components-main/Footer";
 
 export default function PointSolutionsPage() {
   return (
@@ -145,6 +147,12 @@ export default function PointSolutionsPage() {
 
         </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
+
     </main>
   );
 }

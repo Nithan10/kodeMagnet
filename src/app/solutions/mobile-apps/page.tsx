@@ -2,9 +2,17 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { NavbarDemo } from "@/app/components-main/Navbar";
+import Footer from "@/app/components-main/Footer"; // Imported Footer
 import Image from "next/image";
 import Link from "next/link";
-import { IconBrandApple, IconBrandAndroid, IconDeviceMobile, IconBolt, IconWifiOff, IconFingerprint } from "@tabler/icons-react";
+import { 
+  IconBrandApple, 
+  IconBrandAndroid, 
+  IconDeviceMobile, 
+  IconBolt, 
+  IconWifiOff, 
+  IconFingerprint 
+} from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 export default function MobileAppsPage() {
@@ -17,16 +25,18 @@ export default function MobileAppsPage() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   return (
-    // Updated selection color to Orange
-    <main ref={containerRef} className="min-h-screen bg-black text-white selection:bg-[#ff4d00] selection:text-white overflow-hidden">
-      {/* Navbar */}
-      <div className="relative w-full flex items-center justify-center">
+    <main 
+      ref={containerRef} 
+      className="min-h-screen bg-black text-white selection:bg-[#ff4d00] selection:text-white overflow-hidden"
+    >
+      {/* --- NAVBAR --- */}
+      <div className="relative w-full flex items-center justify-center z-50">
          <NavbarDemo />
       </div>
 
       {/* --- HERO SECTION --- */}
       <section className="relative w-full pt-40 pb-20 px-6">
-        {/* Updated Background Gradient (Red/Orange hue) */}
+        {/* Background Gradient (Red/Orange hue) */}
         <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#ff4d00]/20 to-transparent opacity-30 pointer-events-none" />
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -34,7 +44,6 @@ export default function MobileAppsPage() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                // Updated text color
                 className="flex items-center gap-2 text-[#ff4d00] font-mono text-sm uppercase tracking-widest"
               >
                  <IconDeviceMobile className="w-5 h-5" />
@@ -48,7 +57,6 @@ export default function MobileAppsPage() {
                 className="text-5xl md:text-7xl font-bold tracking-tight leading-none"
               >
                 Apps That <br />
-                {/* Updated Gradient Text to match Logo (Red to Orange) */}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2600] to-[#ff9100]">
                   Define Brands.
                 </span>
@@ -78,7 +86,7 @@ export default function MobileAppsPage() {
              transition={{ duration: 0.8, ease: "easeOut" }}
              className="relative h-[600px] flex items-center justify-center"
            >
-              {/* Decorative Glow - Updated to Orange */}
+              {/* Decorative Glow */}
               <div className="absolute inset-0 bg-[#ff4d00] blur-[100px] opacity-20 rounded-full" />
               
               {/* Phone Frame 1 */}
@@ -144,7 +152,7 @@ export default function MobileAppsPage() {
             </div>
 
             {/* Right: Text */}
-            <div>
+            <div className="relative z-10">
                <h2 className="text-3xl md:text-5xl font-bold mb-6">
                  Built for the <br />
                  <span className="text-[#ff4d00]">Modern User.</span>
@@ -159,6 +167,11 @@ export default function MobileAppsPage() {
             </div>
          </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
 
     </main>
   );
@@ -188,7 +201,6 @@ const PhoneFrame = ({ className, imageSrc }: { className?: string, imageSrc: str
 }
 
 const TechPill = ({ icon, text }: { icon: React.ReactNode, text: string }) => (
-   // Updated Hover Border color
    <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-neutral-300 text-sm hover:border-[#ff4d00] hover:text-white transition-colors cursor-default">
       {icon}
       <span>{text}</span>
@@ -198,13 +210,11 @@ const TechPill = ({ icon, text }: { icon: React.ReactNode, text: string }) => (
 const ApproachCard = ({ title, subtitle, description, isRecommended }: { title: string, subtitle: string, description: string, isRecommended: boolean }) => (
    <div className={cn(
       "p-8 rounded-2xl border transition-all duration-300 relative group overflow-hidden",
-      // Updated Border and Shadow colors for recommended card
       isRecommended 
         ? "bg-neutral-900/80 border-[#ff4d00]/50 shadow-[0_0_30px_rgba(255,77,0,0.15)]" 
         : "bg-neutral-950 border-white/10 hover:border-white/20"
    )}>
       {isRecommended && (
-         // Updated Badge to Gradient Orange
          <div className="absolute top-4 right-4 px-2 py-1 bg-gradient-to-r from-[#ff4d00] to-[#ff9100] text-white text-[10px] font-bold uppercase tracking-wide rounded">
             Popular
          </div>
@@ -216,7 +226,6 @@ const ApproachCard = ({ title, subtitle, description, isRecommended }: { title: 
 )
 
 const FeatureBox = ({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) => (
-   // Updated Hover Border color
    <div className="p-6 rounded-xl bg-neutral-900 border border-white/5 hover:border-[#ff4d00]/40 transition-colors">
       <div className="mb-3 text-[#ff4d00]">{icon}</div>
       <h4 className="font-bold text-white text-sm mb-1">{title}</h4>

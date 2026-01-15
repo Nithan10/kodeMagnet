@@ -51,7 +51,7 @@ export default function CodeMagnetLMSPage() {
           </h1>
 
           <p className="text-xl text-neutral-400 max-w-2xl mx-auto mb-12">
-            CodeMagnet LMS is the all-in-one platform for bootcamps and universities. 
+            KodeMagnet LMS is the all-in-one platform for bootcamps and universities. 
             Integrated IDEs, AI-powered grading, and plagiarism detection built right in.
           </p>
 
@@ -87,7 +87,7 @@ export default function CodeMagnetLMSPage() {
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                       <div className="w-3 h-3 rounded-full bg-green-500"></div>
                    </div>
-                   <div className="text-xs text-neutral-400 font-mono">assignment_01.py - CodeMagnet IDE</div>
+                   <div className="text-xs text-neutral-400 font-mono">assignment_01.py - KodeMagnet IDE</div>
                    <div className="w-16"></div> 
                 </div>
 

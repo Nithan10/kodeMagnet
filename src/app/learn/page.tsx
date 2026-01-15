@@ -15,6 +15,8 @@ import {
   Loader2
 } from "lucide-react";
 import { NavbarDemo } from "../components-main/Navbar";
+// 1. Import Footer
+import Footer from "../components-main/Footer";
 
 // Updated Accent Color
 const accentColor = "#FF5F38";
@@ -75,16 +77,16 @@ export default function LearnPage() {
           </motion.p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-             {/* TRIGGER MODAL - Orange Button */}
-             <button 
+              {/* TRIGGER MODAL - Orange Button */}
+              <button 
                 onClick={() => openModal("Internship Program")}
                 className="px-8 py-4 rounded-full bg-[#FF5F38] text-white font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,95,56,0.3)]"
-             >
+              >
                 Apply for Internship
-             </button>
-             <button className="px-8 py-4 rounded-full border border-white/20 font-bold text-lg hover:bg-white/5 transition-colors">
+              </button>
+              <button className="px-8 py-4 rounded-full border border-white/20 font-bold text-lg hover:bg-white/5 transition-colors">
                 View Syllabus
-             </button>
+              </button>
           </div>
         </div>
       </section>
@@ -203,7 +205,7 @@ export default function LearnPage() {
                      Enroll Now
                   </button>
                </div>
-
+               
                {/* Course List */}
                <div className="grid sm:grid-cols-2 gap-4">
                   <div className="col-span-2 mb-4">
@@ -237,6 +239,11 @@ export default function LearnPage() {
          </button>
       </section>
 
+      {/* ======================= FOOTER ======================= */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
+
       {/* ======================= THE MODAL ======================= */}
       <EnrollmentModal 
          isOpen={isModalOpen} 
@@ -256,7 +263,7 @@ const EnrollmentModal = ({ isOpen, onClose, initialInterest }: { isOpen: boolean
 
   // Update interest if prop changes
   React.useEffect(() => {
-     setFormData(prev => ({ ...prev, interest: initialInterest }));
+      setFormData(prev => ({ ...prev, interest: initialInterest }));
   }, [initialInterest]);
 
   const handleSubmit = (e: React.FormEvent) => {

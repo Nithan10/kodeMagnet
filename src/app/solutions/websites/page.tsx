@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { NavbarDemo } from "@/app/components-main/Navbar"; // Corrected path based on your folder structure
+import { NavbarDemo } from "@/app/components-main/Navbar";
+// 1. Import Footer
+import Footer from "@/app/components-main/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { IconRocket, IconDeviceDesktop, IconSearch } from "@tabler/icons-react";
@@ -24,9 +26,9 @@ export default function WebsitesSolutionsPage() {
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
-             initial={{ opacity: 0, scale: 0.9 }}
-             animate={{ opacity: 1, scale: 1 }}
-             className="inline-block mb-6 px-4 py-1.5 rounded-full border border-[#FF5F38]/20 bg-[#FF5F38]/5 backdrop-blur-md"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="inline-block mb-6 px-4 py-1.5 rounded-full border border-[#FF5F38]/20 bg-[#FF5F38]/5 backdrop-blur-md"
           >
             <span className="text-[#FF5F38] text-xs font-bold tracking-widest uppercase">Web Development 2.0</span>
           </motion.div>
@@ -144,6 +146,11 @@ export default function WebsitesSolutionsPage() {
              <span className="text-xl font-bold text-white hover:text-[#FF5F38] transition-colors">Framer</span>
              <span className="text-xl font-bold text-white hover:text-[#FF5F38] transition-colors">Sanity</span>
          </div>
+      </div>
+
+      {/* --- FOOTER --- */}
+      <div className="relative z-30">
+        <Footer />
       </div>
 
     </main>

@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ScanFace, Camera, Share2, Zap } from "lucide-react";
 
-// 1. IMPORT YOUR NAVBAR HERE
+// 1. IMPORT NAVBAR & FOOTER
 import { NavbarDemo } from "../../../app/components-main/Navbar"; 
+import Footer from "@/app/components-main/Footer"; // Imported Footer
 
 // Updated to Brand Orange
 const accentColor = "#ff4d00";
@@ -140,32 +141,32 @@ export default function Page() {
             
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                 <Image
-                  src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1470&auto=format&fit=crop"
-                  alt="Event vibe 1"
-                  width={300} height={400}
-                  className="rounded-2xl object-cover h-64 w-full border border-white/5"
-                 />
-                 <Image
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
-                  alt="Event vibe 2"
-                  width={300} height={300}
-                  className="rounded-2xl object-cover h-48 w-full border border-white/5"
-                 />
+                  <Image
+                   src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1470&auto=format&fit=crop"
+                   alt="Event vibe 1"
+                   width={300} height={400}
+                   className="rounded-2xl object-cover h-64 w-full border border-white/5"
+                  />
+                  <Image
+                   src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
+                   alt="Event vibe 2"
+                   width={300} height={300}
+                   className="rounded-2xl object-cover h-48 w-full border border-white/5"
+                  />
               </div>
               <div className="space-y-4 pt-8">
-                 <Image
-                  src="https://images.unsplash.com/photo-1519671482502-9759101d4561?q=80&w=1470&auto=format&fit=crop"
-                  alt="Event vibe 3"
-                  width={300} height={300}
-                  className="rounded-2xl object-cover h-48 w-full border border-white/5"
-                 />
-                 <Image
-                  src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=1470&auto=format&fit=crop"
-                  alt="Event vibe 4"
-                  width={300} height={400}
-                  className="rounded-2xl object-cover h-64 w-full border border-white/5"
-                 />
+                  <Image
+                   src="https://images.unsplash.com/photo-1519671482502-9759101d4561?q=80&w=1470&auto=format&fit=crop"
+                   alt="Event vibe 3"
+                   width={300} height={300}
+                   className="rounded-2xl object-cover h-48 w-full border border-white/5"
+                  />
+                  <Image
+                   src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=1470&auto=format&fit=crop"
+                   alt="Event vibe 4"
+                   width={300} height={400}
+                   className="rounded-2xl object-cover h-64 w-full border border-white/5"
+                  />
               </div>
             </div>
           </div>
@@ -193,6 +194,12 @@ export default function Page() {
           </Link>
         </div>
       </section>
+
+      {/* ======================= FOOTER ======================= */}
+      <div className="relative z-30">
+        <Footer />
+      </div>
+
     </main>
   );
 }
