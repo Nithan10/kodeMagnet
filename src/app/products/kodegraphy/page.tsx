@@ -19,7 +19,8 @@ export default function Page() {
       </div>
 
       {/* ======================= HERO SECTION ======================= */}
-      <section className="relative pt-20 pb-20 lg:pt-32 lg:pb-28 px-6">
+      {/* FIX: Changed pt-20 to pt-32 on mobile to create space below the Navbar */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-28 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Text Content */}
