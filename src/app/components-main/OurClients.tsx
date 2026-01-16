@@ -2,7 +2,6 @@
 import React from "react";
 import { ThreeDMarquee } from "@/components/ui/3d-marquee";
 
-// ... [Keep your 'clients' array exactly as it is] ...
 const clients = [
   { name: "Google", logo: "https://cdn.simpleicons.org/google" },
   { name: "Microsoft", logo: "https://cdn.simpleicons.org/microsoft" },
@@ -40,28 +39,37 @@ const clients = [
 
 export default function OurClients() {
   return (
-    // CHANGED: bg-black (was bg-neutral-950), pt-0 (was py-24), removed border-t
-    <div className="relative w-full bg-black pt-0 pb-24 overflow-hidden flex flex-col items-center justify-center z-20">
+    <div className="relative w-full bg-black pt-16 md:pt-24 pb-20 overflow-hidden flex flex-col items-center justify-center z-20">
       
       {/* Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
 
-      {/* Header */}
-      <div className="relative z-10 text-center mb-10 px-6 mt-10">
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-          Trusted by <span className="bg-gradient-to-r from-[#FF5F38] to-[#FF9068] bg-clip-text text-transparent">Global Innovators</span>
+      {/* Header Section */}
+      <div className="relative z-50 text-center px-6 max-w-5xl mx-auto mb-12 md:mb-16">
+        {/* Adjusted Header Size: 
+            Mobile: text-4xl
+            Tablet: text-6xl
+            Desktop: text-7xl
+        */}
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
+          Trusted by <span className="bg-gradient-to-r from-[#FF5F38] to-[#FF9068] bg-clip-text text-transparent inline-block">Global Innovators</span>
         </h2>
-        <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
-          Powering the next generation of tech giants, startups, and enterprise leaders.
+        
+        {/* Adjusted Subtext:
+            Slightly smaller on mobile (text-sm) to keep the layout tight, 
+            scaling up to text-xl for desktop readability.
+        */}
+        <p className="text-neutral-400 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed opacity-80">
+          Powering the next generation of tech giants, startups, and enterprise leaders worldwide.
         </p>
       </div>
 
       {/* --- 3D MARQUEE IMPLEMENTATION --- */}
-      <div className="w-full relative z-10 -mt-32 md:-mt-40">
+      <div className="w-full relative z-10 mt-6 md:mt-10">
          <ThreeDMarquee items={clients} />
          
-         {/* Fade Overlay at Bottom */}
-         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none"></div>
+         {/* Bottom Fade Overlay */}
+         <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-t from-black via-black/90 to-transparent pointer-events-none z-20"></div>
       </div>
 
     </div>
